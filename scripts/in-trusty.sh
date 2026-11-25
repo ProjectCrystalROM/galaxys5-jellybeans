@@ -20,7 +20,7 @@ sudo unshare --mount --propagation private bash -e -c '
     mount --bind /dev "$rootfs/dev"
     mount -t proc proc "$rootfs/proc"
     exec chroot --userspec="$uid:$gid" "$rootfs" /usr/bin/env -i HOME=/tmp/crystal-home \
-        PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin LANG=C LC_ALL=C \
+        PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin LANG=C.UTF-8 LC_ALL=C.UTF-8 \
         JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64 \
         /bin/bash -c '\''cd /src && exec "$@"'\'' bash "$@"
 ' bash "$rootfs" "$tree" "$(id -u)" "$(id -g)" "$@"

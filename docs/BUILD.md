@@ -43,7 +43,7 @@ apt-get install --no-install-recommends \
   libgl1-mesa-dev libxml2-utils xsltproc lzop bc curl ccache pngcrush schedtool libssl-dev
 ```
 
-The chroot runner uses a private mount namespace and the caller's UID/GID. It sets `JAVA_HOME` and the build locale. Repository operations stay on the modern host. Keep the chroot's `/src` mount and an **absolute** `OUT_DIR` for integrated kernel recipes, which invoke `make -C kernel/samsung/klte O=...`. A relative output path fails inside the kernel directory. Build variants sequentially within one checkout because the historical BusyBox build probes library availability using a shared temporary filename.
+The chroot runner uses a private mount namespace and the caller's UID/GID. It sets `JAVA_HOME` and the `C.UTF-8` build locale. CM10.2 DroidDoc fails on non-ASCII source and generated resources when the locale is plain `C`. Repository operations stay on the modern host. Keep the chroot's `/src` mount and an **absolute** `OUT_DIR` for integrated kernel recipes, which invoke `make -C kernel/samsung/klte O=...`. A relative output path fails inside the kernel directory. Build variants sequentially within one checkout because the historical BusyBox build probes library availability using a shared temporary filename.
 
 ```bash
 # Standalone kernel and DTBs. Stage the helper under the mounted source root.
