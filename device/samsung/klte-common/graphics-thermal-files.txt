@@ -1,0 +1,11 @@
+# Shared Galaxy S5 graphics and thermal components for initial bring-up.
+bin/thermal-engine
+etc/firmware/a330_pfp.fw
+etc/firmware/a330_pm4.fw
+vendor/lib/egl/libEGL_adreno.so
+vendor/lib/egl/libGLESv1_CM_adreno.so
+vendor/lib/egl/libGLESv2_adreno.so
+vendor/lib/libC2D2.so
+vendor/lib/libadreno_utils.so
+vendor/lib/libgsl.so
+vendor/lib/libthermalioctl.so

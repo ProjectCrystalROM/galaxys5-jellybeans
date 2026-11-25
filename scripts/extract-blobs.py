@@ -28,8 +28,14 @@ def read_inventory(path):
         yield blob_path(source), blob_path(destination or source)
 
 
-def extract(inventory, system, output, identity):
+def extract(inventory, system, output, identity, profile=None):
     entries = list(read_inventory(inventory / "proprietary-files.txt"))
+    if profile:
+        selected = set(read_inventory(inventory / f"{profile}-files.txt"))
+        unknown = selected.difference(entries)
+        if unknown:
+            raise ValueError(f"Profile contains unlisted files in {inventory.name}: {sorted(unknown)}")
+        entries = [entry for entry in entries if entry in selected]
     files = {}
     missing = []
     for source, destination in entries:
@@ -99,6 +105,10 @@ def main():
         "--common", action="store_true",
         help="Extract the shared inventory from this same firmware as well",
     )
+    parser.add_argument(
+        "--profile", choices=("graphics-thermal",),
+        help="Extract the Adreno and thermal candidates, plus their variant libraries",
+    )
     args = parser.parse_args()
     system = args.system.resolve(strict=True)
     tree = args.android_tree.resolve(strict=True)
@@ -116,7 +126,7 @@ def main():
         for name in names:
             try:
                 extract(PROJECT / "device" / "samsung" / name, system, Path(stage) / name,
-                        args.firmware)
+                        args.firmware, args.profile)
             except ValueError as error:
                 parser.error(str(error))
         for name in names:
