@@ -18,6 +18,13 @@ The shared and per-variant CM11 inventories have a corresponding file for every 
 
 No compatibility shims have been verified. A resolved dynamic symbol alone cannot justify a shim or prove the layout of a struct crossing the ABI. Compare C/C++ exports, each library's transitive dependency closure, linker namespaces relevant to JB, and the kernel device-node and ioctl contracts before assigning a library to the boot image.
 
+## Static link checks against compiled Jelly Bean libraries
+
+A transitive `DT_NEEDED` and strong dynamic-symbol check used the SM-G900T engineering build's Bionic, ICU and framework libraries together with the archived shared and variant vendor samples.
+
+- All tested names resolved for `thermal-engine`, `libEGL_adreno.so`, `libGLESv2_adreno.so`, `sensors.msm8974.so` and both variants' `libsec-ril.so`, `qmuxd` and `rmt_storage`. The scan used the compiled Jelly Bean provider when the archive contained an identically named core library. Relocation and loader-order checks, HAL layout, kernel ABI and device behavior remain separate validation steps.
+- The camera closure had 16 unresolved strong symbols. Twelve are Samsung `CameraParameters` constants for dynamic range control, phase AF and real-time HDR. The four remaining functions are `u_digit_51`, `u_errorName_51`, `utext_close_51`, and `utext_openUChars_51`. The CM10.2 system builds ICU 50.1.1. Its existing older ICU aliases give a compatibility pattern to investigate after comparing the ICU 50/51 `UText` types. The CM11 source supplies the exact strings for the camera constants. [CM11 CameraParameters](https://github.com/CyanogenMod/android_frameworks_av/blob/afc7d8c516a4cff4d7080a444033c06802a60de8/camera/CameraParameters.cpp)
+
 ## Offline extraction
 
 Use Python 3.11 or newer and supply the model's own unpacked system directory, with entries such as `lib`, `vendor` and `etc` directly beneath it. Record the exact firmware build in the command. The shared inventory can be populated by the G900T input. Confirm reuse on G900V file-by-file.
