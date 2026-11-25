@@ -11,7 +11,7 @@
 | Telephony product | GSM/LTE preference, mode 9, CM APNs and retained Phone/TelephonyProvider/Stk | CDMA/LTE preference, mode 10, NV/RUIM settings |
 | RIL differences | CM11 reference used `KlteRIL` and a GSM `libsec-ril.so` | CM11 reference used `SamsungQualcommRIL` and a separate target `libsec-ril.so` |
 | Vendor inputs | Shared candidate inventory plus GSM radio/Bluetooth inventory | Shared candidate inventory plus separate radio, NFC and Bluetooth firmware |
-| Hardware validation | Physically boots to Setup Wizard and `sys.boot_completed=1`; charge LED and capacitive key lighting confirmed. Wi-Fi, radio, and primary audio HAL are not functional in the source-only image. Bluetooth turns on and scans; pairing/audio untested. | Pending SM-G900V and CrystalBTS test access |
+| Hardware validation | Physically boots to Setup Wizard and `sys.boot_completed=1`; charge LED and capacitive key lighting confirmed. Wi-Fi, radio, and primary audio HAL are not functional in the current partial-vendor image. Bluetooth turns on and scans; pairing/audio untested. | Pending SM-G900V and CrystalBTS test access |
 
 The initial installer identity is variant-specific. Recovery partition mappings and device assertions require comparison with each model's actual recovery environment. Modem firmware, bootloaders, EFS images and partition tables are outside the installer payload.
 

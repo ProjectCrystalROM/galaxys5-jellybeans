@@ -16,7 +16,7 @@ The SM-G900T now reaches `sys.boot_completed=1` and Setup Wizard. This is an ear
 | Audio | JB CAF and S5 routing selected; boot log shows primary ALSA HAL fails sound-card detection | Speaker/headset playback, microphone recording and internet voice |
 | GPS, sensor, camera | Candidate inventories available, integration pending | GNSS fix, sensor event delivery, photo/video capture |
 | Charge, thermal, power | S5 kernel protections and target thermal configuration included | Charging/temperature readings, daemon compatibility, charge limits, suspend and power behavior |
-| G900T LTE | Not working in the source-only image. Log shows repeated `rild` failure because `/system/lib/libsec-ril.so` is absent; SIM state is `NOT_READY`, IMEI and signal are unavailable | Integrate and validate the G900T RIL/vendor inputs, then test SIM, attach, APN, routed traffic, reconnect and airplane mode |
+| G900T LTE | Not working in the current partial-vendor image. Log shows repeated `rild` failure because `/system/lib/libsec-ril.so` is absent; SIM state is `NOT_READY`, IMEI and signal are unavailable | Integrate and validate the G900T RIL/vendor inputs, then test SIM, attach, APN, routed traffic, reconnect and airplane mode |
 | G900T incoming SMS | BasicSmsReceiver packaged with classes.dex and SDK 18. Voice disabled and SMS enabled in compiled resources | Real incoming single/multipart messages and post-reboot delivery, independent of LTE traffic |
 | G900V CDMA/EVDO/LTE | Variant properties present, RIL ABI pending | CrystalBTS registration, voice, SMS, EVDO and separate LTE test |
 | Fingerprint, heart rate, Samsung apps | Outside initial scope | — |
