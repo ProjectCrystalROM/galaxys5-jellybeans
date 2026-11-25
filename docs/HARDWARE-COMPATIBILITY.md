@@ -1,10 +1,11 @@
 # Hardware compatibility
 
-There is no physical validation for either target. “Configured” means a source configuration or integration entry exists. “Pending” means a required implementation or compatibility check is still open.
+The original built recovery booted in preliminary device testing. Full ROM boot and hardware validation remain pending. “Configured” means a source configuration or integration entry exists. “Pending” means a required implementation or compatibility check is still open.
 
 | Subsystem | Checkout status | Physical evidence still needed |
 | --- | --- | --- |
 | Kernel and board DT | Both S5 kernels and QCDT images compiled | Bootloader accepts image, kernel initializes board |
+| Recovery | Original image booted in preliminary device testing. Updated font and keys verified at build level | Check readability and physical button handling |
 | Init, partitions, early ADB | S5 ramdisk and SELinux policy assembled in both boot images | Init logs, partition mounts, ADB and last_kmsg |
 | Launcher and Settings | System images and recovery ZIPs built for both variants. ZIPs verified statically | SurfaceFlinger, Zygote, System Server, UI and handset settings |
 | Display/touch/buttons | S5 kernel and target keymaps included | Panel, touchscreen, physical buttons and capacitive keys |
