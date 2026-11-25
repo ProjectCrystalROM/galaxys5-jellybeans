@@ -4,9 +4,9 @@ There is no physical validation for either target. “Configured” means a sour
 
 | Subsystem | Checkout status | Physical evidence still needed |
 | --- | --- | --- |
-| Kernel and board DT | Target S5 source and per-model configurations pinned | Bootloader accepts image, kernel initializes board |
-| Init, partitions, early ADB | S5 ramdisk port configured | Init logs, partition mounts, ADB and last_kmsg |
-| Launcher and Settings | CM10.2 products configured | SurfaceFlinger, Zygote, System Server, UI and handset settings |
+| Kernel and board DT | Both S5 kernels and QCDT images compiled | Bootloader accepts image, kernel initializes board |
+| Init, partitions, early ADB | S5 ramdisk and SELinux policy assembled in the G900T boot image | Init logs, partition mounts, ADB and last_kmsg |
+| Launcher and Settings | G900T system image and recovery ZIP verified statically | SurfaceFlinger, Zygote, System Server, UI and handset settings |
 | Display/touch/buttons | S5 kernel and target keymaps included | Panel, touchscreen, physical buttons and capacitive keys |
 | Accelerated graphics and media | JB MDSS/V4L2 candidates selected | ION/HWC/codec ABI, rendering and hardware decode |
 | Internal, microSD, USB, MTP | Jelly Bean FUSE syntax and vold records configured | Storage access, USB functions and MTP transfer |
@@ -15,7 +15,7 @@ There is no physical validation for either target. “Configured” means a sour
 | GPS, sensor, camera | Candidate inventories available, integration pending | GNSS fix, sensor event delivery, photo/video capture |
 | Charge, thermal, power | S5 kernel protections and target thermal configuration included | Charging/temperature readings, daemon compatibility, charge limits, suspend and power behavior |
 | G900T LTE | Variant properties and APN configuration present, RIL ABI pending | SIM read, attach, APN, routed traffic, reconnect and airplane mode |
-| G900T incoming SMS | BasicSmsReceiver compiled in isolation against API 18 framework interfaces | Real incoming single/multipart messages and post-reboot delivery, independent of LTE traffic |
+| G900T incoming SMS | BasicSmsReceiver packaged with classes.dex and SDK 18. Voice disabled and SMS enabled in compiled resources | Real incoming single/multipart messages and post-reboot delivery, independent of LTE traffic |
 | G900V CDMA/EVDO/LTE | Variant properties present, RIL ABI pending | CrystalBTS registration, voice, SMS, EVDO and separate LTE test |
 | Fingerprint, heart rate, Samsung apps | Outside initial scope | — |
 

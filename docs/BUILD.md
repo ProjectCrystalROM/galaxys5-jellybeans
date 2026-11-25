@@ -59,11 +59,23 @@ cp "$project/scripts/build-kernel.sh" "$android_tree/out/"
   export OUT_DIR="$PWD/out-$1"
   source build/envsetup.sh &&
     lunch "cm_$1-userdebug" &&
-    make -j12 bootimage systemimage
+    make -j12 bootimage systemimage otapackage
 ' bash kltetmo
 ```
 
-Before runtime images, review [blob compatibility](BLOB-COMPATIBILITY.md) and stage ABI-checked target inputs. There is no public flashable build at this checkpoint. The integrated command is for source-level bring-up and may produce incomplete images without proprietary dependencies.
+The recovery ZIP appears under `out-<variant>/target/product/<variant>/` in the Android checkout. Verify the package on the modern host.
+
+```bash
+"$project/scripts/check-recovery-zip.py" kltetmo /path/to/cm_kltetmo-ota-*.zip
+```
+
+Before device use, review [blob compatibility](BLOB-COMPATIBILITY.md) and the [installation status](INSTALLATION.md). Both the source-only and optional graphics/thermal profiles are engineering builds. The source-only build leaves device firmware and proprietary services unresolved.
+
+## Verified workspace outputs
+
+- SM-G900T source-only build. Kernel, QCDT, boot, system, recovery and OTA compiled under Trusty. The staged archive is `out/engineering/kltetmo/cm_kltetmo-ota-70bd1fc4d2.zip` in this workspace. The verifier checked the archive CRCs, boot format, variant assertion, partition references, native Dalvik and required package contents.
+- SM-G900T graphics and thermal trial. Built and verified locally with the optional extraction profile from the pinned historical vendor archive. The ZIP includes 23 input files whose packaged hashes were compared with the extraction records. This output remains in the local Android output directory.
+- Standalone kernels. `out/kernel-kltetmo/` and `out/kernel-kltevzw/` hold verified Linux 3.4 zImages, DTBs, QCDT images and SHA-256 manifests. The two products use separate kernel builds and each DT image has seven board entries.
 
 ## Failure classification
 

@@ -6,7 +6,7 @@ import hashlib
 from pathlib import Path
 import re
 import struct
-from zipfile import ZipFile
+from zipfile import BadZipFile, ZipFile
 
 MODELS = {"kltetmo": "SM-G900T", "kltevzw": "SM-G900V"}
 RECOVERY = "META-INF/com/google/android/"
@@ -24,7 +24,7 @@ def check_boot(image):
     )
     require(magic == b"ANDROID!" and page == 2048, "Unexpected boot header")
     require((address, tags) == (0x02000000, 0x01E00000), "Unexpected ramdisk or tags address")
-    require(kernel and ramdisk and dt and not second, "Missing kernel, ramdisk or DT table")
+    require(kernel and ramdisk and dt >= 12 and not second, "Missing kernel, ramdisk or DT table")
     require(image[page + 0x24 : page + 0x28] == b"\x18\x28\x6f\x01", "ARM zImage magic missing")
     ramdisk_offset = page + ((kernel + page - 1) // page) * page
     dt_offset = ramdisk_offset + ((ramdisk + page - 1) // page) * page
@@ -81,6 +81,7 @@ def check_archive(path, variant):
             require(not voice_apps.intersection(names), "Unexpected Dialer or Mms")
         else:
             require(voice_apps.issubset(names), "Missing Verizon Dialer or Mms")
+            require("system/app/BasicSmsReceiver.apk" not in names, "Unexpected Verizon receiver package")
         check_boot(archive.read("boot.img"))
 
 
@@ -91,7 +92,7 @@ def main():
     args = parser.parse_args()
     try:
         check_archive(args.archive, args.variant)
-    except (ValueError, KeyError, OSError) as error:
+    except (BadZipFile, ValueError, KeyError, OSError) as error:
         parser.exit(1, f"{args.archive}: {error}\n")
     with args.archive.open("rb") as stream:
         digest = hashlib.file_digest(stream, "sha256").hexdigest()
