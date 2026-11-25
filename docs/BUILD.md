@@ -18,6 +18,15 @@ repo sync -c -j12
 "$project/scripts/fetch-cm-prebuilts.sh" "$android_tree"
 ```
 
+The checked-in GitHub remote allows anonymous cloning. On a machine configured for GitHub SSH, scope a rewrite to the sync command.
+
+```bash
+GIT_CONFIG_COUNT=1 \
+  GIT_CONFIG_KEY_0=url.ssh://git@github.com/.insteadOf \
+  GIT_CONFIG_VALUE_0=https://github.com/ \
+  repo sync -c -j12
+```
+
 The prebuilt step recovers the 2013 Terminal Emulator matching the library name required by `vendor/cm/config/common.mk`. It checks the APK digest before staging the file and its ARM native library. The upstream download command used a retired URL.
 
 ## Isolated legacy build environment
