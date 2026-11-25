@@ -285,7 +285,6 @@
   <project path="libnativehelper" name="CyanogenMod/android_libnativehelper" groups="pdk-java" remote="github" revision="3abb5383d9883eb98c0371957043e5d67e448a06" upstream="refs/tags/cm-10.2.0" />
   <project path="ndk" name="platform/ndk" remote="aosp" revision="52d203309fcbb666cb98c5a74bbdba6615c980ea" upstream="refs/tags/android-4.3.1_r1" />
   <project path="packages/apps/Apollo" name="CyanogenMod/android_packages_apps_Apollo" remote="github" revision="2fccc6344ab337aed6c50424f377f7366a863402" upstream="refs/tags/cm-10.2.0" />
-  <project path="packages/apps/BasicSmsReceiver" name="CyanogenMod/android_packages_apps_BasicSmsReceiver" remote="github" revision="b927846305771caeac3fc35c00d6f0f10da186ce" upstream="refs/tags/cm-10.2.0" />
   <project path="packages/apps/Bluetooth" name="CyanogenMod/android_packages_apps_Bluetooth" remote="github" revision="3750e47742270b5a17b856a2b13bbd66503e50ac" upstream="refs/tags/cm-10.2.0" />
   <project path="packages/apps/BluetoothExt" name="CyanogenMod/android_packages_apps_BluetoothExt" remote="github" revision="42443098b8b3824ec67d57233e7c65d5be37ea3a" upstream="refs/tags/cm-10.2.0" />
   <project path="packages/apps/Browser" name="CyanogenMod/android_packages_apps_Browser" remote="github" revision="e22609197a2f1250a45263436599e8a3286286c9" upstream="refs/tags/cm-10.2.0" />

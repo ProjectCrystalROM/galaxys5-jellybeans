@@ -53,3 +53,6 @@ BOARD_WPA_SUPPLICANT_DRIVER := NL80211
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_bcmdhd
 BOARD_HOSTAPD_DRIVER := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_bcmdhd
+
+BOARD_SEPOLICY_DIRS += device/samsung/klte-common/sepolicy
+BOARD_SEPOLICY_UNION += firmware.te

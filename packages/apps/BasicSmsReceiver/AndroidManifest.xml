@@ -20,6 +20,7 @@
         package="com.android.basicsmsreceiver">
 
     <original-package android:name="com.android.basicsmsreceiver" />
+    <uses-sdk android:minSdkVersion="18" android:targetSdkVersion="18" />
 
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
 
@@ -29,11 +30,12 @@
             android:hardwareAccelerated="true">
 
         <activity android:name=".DialogSmsDisplay"
-                  android:theme="@android:style/Theme.Material.Light.Dialog"
+                  android:theme="@android:style/Theme.Holo.Light.Dialog"
                   android:launchMode="singleTop"
                   android:exported="false" />
 
         <receiver android:name=".SmsMessageReceiver"
+                  android:exported="true"
                   android:permission="android.permission.BROADCAST_SMS">
             <intent-filter>
                 <action android:name="android.provider.Telephony.SMS_RECEIVED" />

@@ -31,13 +31,18 @@ def read_inventory(path):
 def extract(inventory, system, output, identity):
     entries = list(read_inventory(inventory / "proprietary-files.txt"))
     files = {}
+    missing = []
     for source, destination in entries:
         candidate = (system / source).resolve()
         if not candidate.is_relative_to(system) or not candidate.is_file():
-            raise ValueError(f"Missing or out-of-tree firmware file: {source}")
+            missing.append(str(source))
+            continue
         if destination in files:
             raise ValueError(f"Duplicate destination: {destination}")
         files[destination] = candidate
+
+    if missing:
+        raise ValueError("Missing or out-of-tree firmware files: " + ", ".join(missing))
 
     copy_files = []
     modules = []
@@ -48,6 +53,8 @@ def extract(inventory, system, output, identity):
         blob = output / "proprietary" / destination
         blob.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(candidate, blob)
+        if destination.parts[0] in ("bin", "xbin"):
+            blob.chmod(0o755)
         with blob.open("rb") as stream:
             digest = hashlib.file_digest(stream, "sha256").hexdigest()
         provenance.append(f"{digest}  {destination}")

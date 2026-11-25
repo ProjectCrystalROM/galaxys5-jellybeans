@@ -1,1 +1,1 @@
-PRODUCT_MAKEFILES := $(LOCAL_DIR)/cm_kltevzw.mk
+PRODUCT_MAKEFILES := $(LOCAL_DIR)/cm.mk

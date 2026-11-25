@@ -722,8 +722,10 @@ int main(int argc, char **argv)
     closedir(dir);
     log_info("=> Found %d unique DTB(s)\n", dtb_count);
 
-    if (!dtb_count)
+    if (!dtb_count) {
+        rc = RC_ERROR;
         goto cleanup;
+    }
 
 
     /* Generate the master DTB file:
@@ -734,8 +736,8 @@ int main(int argc, char **argv)
 
     log_info("\nGenerating master DTB... ");
 
-    out_fd = open(output_file, O_WRONLY|O_CREAT, S_IRUSR|S_IWUSR);
-    if (!out_fd < 0) {
+    out_fd = open(output_file, O_WRONLY|O_CREAT|O_TRUNC, S_IRUSR|S_IWUSR);
+    if (out_fd < 0) {
         log_err("Cannot create '%s'\n", output_file);
         rc = RC_ERROR;
         goto cleanup;
@@ -827,11 +829,11 @@ int main(int argc, char **argv)
     close(out_fd);
 
     if (expected != wrote) {
-        log_err("error writing output file, please rerun: size mismatch %d vs %d\n",
+        log_err("error writing output file, please rerun: size mismatch %zu vs %zu\n",
                 expected, wrote);
         rc = RC_ERROR;
     } else
-        log_dbg("Total wrote %u bytes\n", wrote);
+        log_dbg("Total wrote %zu bytes\n", wrote);
 
     if (rc != RC_SUCCESS)
         unlink(output_file);

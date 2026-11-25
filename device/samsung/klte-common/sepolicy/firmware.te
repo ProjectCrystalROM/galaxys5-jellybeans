@@ -1,0 +1,5 @@
+# Read-only firmware and modem filesystems mounted by fstab.qcom.
+type firmware_file, fs_type;
+
+allow ueventd firmware_file:dir r_dir_perms;
+allow ueventd firmware_file:file r_file_perms;

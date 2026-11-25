@@ -1,8 +1,10 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 $(call inherit-product, vendor/cm/config/common_full.mk)
 $(call inherit-product, vendor/cm/config/telephony.mk)
-DEVICE_PACKAGE_OVERLAYS += device/samsung/kltetmo/overlay
-PRODUCT_PACKAGES += BasicSMSReceiver
+PRODUCT_CHARACTERISTICS := default
+PRODUCT_PROPERTY_OVERRIDES += keyguard.no_require_sim=true ro.config.notification_sound=Argon.ogg
+PRODUCT_PACKAGE_OVERLAYS += device/samsung/kltetmo/overlay
+PRODUCT_PACKAGES += BasicSmsReceiver
 $(call inherit-product, device/samsung/klte-common/klte.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product-if-exists, vendor/samsung/kltetmo/kltetmo-vendor.mk)
