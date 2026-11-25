@@ -42,7 +42,17 @@ def check_archive(path, variant):
         names = set(archive.namelist())
         script = archive.read(RECOVERY + "updater-script").decode()
         device_assert = re.findall(r'getprop\("ro\.(?:product\.device|build\.product)"\)\s*==\s*"([^"]+)"', script)
-        require(set(device_assert) == {variant}, "Updater device assertion disagrees with the variant")
+        if variant == "kltetmo":
+            require(set(device_assert) in ({"kltetmo"}, {"kltetmo", "klte"}),
+                    "Updater device assertion disagrees with the variant")
+            if "klte" in device_assert:
+                guard = ('assert(getprop("ro.product.device") == "kltetmo" || '
+                         'getprop("ro.build.product") == "kltetmo" || '
+                         'is_substring("G900TUV", getprop("ro.bootloader")));')
+                first_write = script.index('mount(')
+                require(guard in script[:first_write], "Missing G900T guard before partition access")
+        else:
+            require(set(device_assert) == {variant}, "Updater device assertion disagrees with the variant")
         block_paths = re.findall(r'["\'](/dev/block/[^"\']+)["\']', script)
         expected = {f"/dev/block/platform/msm_sdcc.1/by-name/{p}" for p in ("boot", "system")}
         require(set(block_paths) == expected, "Unexpected updater partition references")

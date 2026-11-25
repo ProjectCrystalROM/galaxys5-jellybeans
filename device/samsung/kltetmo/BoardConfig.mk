@@ -1,6 +1,7 @@
 include device/samsung/klte-common/BoardConfigCommon.mk
 
-TARGET_OTA_ASSERT_DEVICE := kltetmo
+TARGET_OTA_ASSERT_DEVICE := kltetmo,klte
+TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/kltetmo
 TARGET_KERNEL_VARIANT_CONFIG := msm8974pro_sec_klte_eur_defconfig
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2621440000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 12669926400
