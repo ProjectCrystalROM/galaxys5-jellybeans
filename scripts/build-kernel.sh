@@ -16,3 +16,7 @@ make -C "$kernel" ARCH=arm CROSS_COMPILE="$toolchain" O="$output" \
     VARIANT_DEFCONFIG="msm8974pro_sec_klte_${carrier}_defconfig" \
     SELINUX_DEFCONFIG=selinux_defconfig msm8974_sec_defconfig
 make -C "$kernel" ARCH=arm CROSS_COMPILE="$toolchain" O="$output" -j"${2:-8}" zImage dtbs
+
+boot=$output/arch/arm/boot
+cc -O2 -Wall -o "$output/dtbToolCM" device/samsung/klte-common/dtbtool/dtbtool.c
+"$output/dtbToolCM" -o "$output/dt.img" -s 2048 -p "$output/scripts/dtc/" "$boot/"
