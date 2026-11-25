@@ -39,7 +39,15 @@ TARGET_USES_ION := true
 TARGET_USES_OVERLAY := true
 TARGET_USES_C2D_COMPOSITION := true
 USE_OPENGL_RENDERER := true
+# Jelly Bean's EGL loader defaults to the software renderer without egl.cfg.
+# Only select Adreno when its vendor makefile and driver files are staged.
+klte_egl_vendor := vendor/samsung/klte-common
+klte_egl_dir := $(klte_egl_vendor)/proprietary/vendor/lib/egl
+ifneq ($(wildcard $(klte_egl_vendor)/klte-common-vendor.mk),)
+ifeq ($(words $(wildcard $(addprefix $(klte_egl_dir)/,libEGL_adreno.so libGLESv1_CM_adreno.so libGLESv2_adreno.so))),3)
 BOARD_EGL_CFG := device/samsung/klte-common/configs/egl.cfg
+endif
+endif
 TARGET_QCOM_DISPLAY_VARIANT := mdss
 TARGET_QCOM_MEDIA_VARIANT := v4l2
 TARGET_QCOM_AUDIO_VARIANT := caf

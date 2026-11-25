@@ -6,8 +6,8 @@ The original built recovery booted in preliminary device testing. Full ROM boot 
 | --- | --- | --- |
 | Kernel and board DT | Both S5 kernels and QCDT images compiled | Bootloader accepts image, kernel initializes board |
 | Recovery | Original image booted in preliminary device testing. Updated font and keys verified at build level | Check readability and physical button handling |
-| Init, partitions, early ADB | S5 ramdisk and SELinux policy assembled in both boot images | Init logs, partition mounts, ADB and last_kmsg |
-| Launcher and Settings | System images and recovery ZIPs built for both variants. ZIPs verified statically | SurfaceFlinger, Zygote, System Server, UI and handset settings |
+| Init, partitions, early ADB | Ramdisk and SELinux policy assembled for both variants. The G900T recovery installed the source-only ZIP and USB ADB enumerated during the ROM boot attempt as unauthorized | Init logs, partition mounts, ADB and last_kmsg |
+| Launcher and Settings | G900T started Zygote. SurfaceFlinger aborted on invalid EGL display and System Server waited for it. | Verify EGL initialization, then launcher and Settings |
 | Display/touch/buttons | S5 kernel and target keymaps included | Panel, touchscreen, physical buttons and capacitive keys |
 | Accelerated graphics and media | JB MDSS/V4L2 candidates selected | ION/HWC/codec ABI, rendering and hardware decode |
 | Internal, microSD, USB, MTP | Jelly Bean FUSE syntax and vold records configured | Storage access, USB functions and MTP transfer |
