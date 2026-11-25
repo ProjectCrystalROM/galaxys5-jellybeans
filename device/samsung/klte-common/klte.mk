@@ -15,7 +15,7 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default audio.usb.default \
     copybit.msm8974 gralloc.msm8974 hwcomposer.msm8974 libstagefrighthw \
     libOmxCore libOmxVdec libOmxVenc lib_driver_cmd_bcmdhd \
-    lights.msm8974 rild
+    lights.msm8974 klte_macloader rild
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/fstab.qcom:root/fstab.qcom \

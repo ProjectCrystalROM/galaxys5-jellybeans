@@ -400,6 +400,7 @@
   <project path="vendor/tmobile/apps/ThemeChooser" name="CyanogenMod/themes-platform-vendor-tmobile-apps-ThemeChooser" remote="github" revision="78bd22d6c23e1ccd6732f46c1a6f3c197214e4c1" upstream="refs/tags/cm-10.2.0" />
   <project path="vendor/tmobile/libs/com.tmobile.themes" name="CyanogenMod/android_vendor_tmobile_libs_com.tmobile.themes" remote="github" revision="4c0f151c11b3de7b70f5ef1d67a69501147bf263" upstream="refs/tags/cm-10.2.0" />
   <project path="vendor/tmobile/providers/ThemeManager" name="CyanogenMod/android_vendor_tmobile_providers_ThemeManager" remote="github" revision="d077dd57c9653ae5060784b6645234aab9ecc13b" upstream="refs/tags/cm-10.2.0" />
+  <project name="CyanogenMod/android_hardware_samsung" path="hardware/samsung" revision="51af4fccfdbb73eec677962ec138d7b435bcbc50" upstream="refs/tags/cm-10.2.0" remote="github" />
   <project name="CyanogenMod/android_kernel_samsung_klte" path="kernel/samsung/klte" revision="ddd87888415168bb105e531dd1813c0f9b4655db" upstream="refs/heads/cm-11.0" remote="github" />
   <project name="CyanogenMod/android_hardware_qcom_display-mdss" path="hardware/qcom/display-mdss" revision="424876114be8f646d46e0a5ba0f061682c5a0fdb" upstream="refs/tags/cm-10.2.0" remote="github" />
   <project name="CyanogenMod/android_hardware_qcom_media-v4l2" path="hardware/qcom/media-v4l2" revision="81fb75b231f95dbe52dae28a1ca9184dc7537795" upstream="refs/tags/cm-10.2.0" remote="github" />
