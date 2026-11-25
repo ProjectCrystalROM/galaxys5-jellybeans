@@ -70,4 +70,5 @@ Before runtime images, review [blob compatibility](BLOB-COMPATIBILITY.md) and st
 - Source acquisition. The original published root manifest points to unmaintained refs and aux projects. The checked-in manifest syncs from verified, pinned historical Git refs.
 - Missing CM prebuilt. `Term.apk` is an out-of-tree input separate from device blobs. Recover it using the script above.
 - Host configuration. Missing Python 2 and relative Kbuild output paths were resolved using Trusty and absolute paths. The CM build treats Java 7 differently from the modern host Java.
+- Kernel modules. Both historical target configurations have `CONFIG_MODULES` disabled. CM10.2 invokes `modules` and `modules_install` regardless and prints ignored errors for these built-in-driver configurations.
 - Target interfaces. Hardware components need ABI checks and runtime gates, independently of successful host tooling or kernel compilation. See the [hardware matrix](HARDWARE-COMPATIBILITY.md).
