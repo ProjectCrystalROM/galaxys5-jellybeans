@@ -5,7 +5,7 @@
 | Shared source | CM10.2.0, S5 common Linux 3.4, S5 ramdisk and board data, JB Qualcomm display/audio/media | Same |
 | Kernel configuration | `msm8974_sec_defconfig` + `msm8974pro_sec_klte_eur_defconfig` + `selinux_defconfig` | Same base, `msm8974pro_sec_klte_vzw_defconfig` variant |
 | System and data partition sizes from CM11 | 2,621,440,000 and 12,669,926,400 bytes | 2,831,155,200 and 12,187,581,440 bytes |
-| Build status | Kernel, boot, system, recovery and two engineering ZIPs compiled | Kernel and DT compiled. Android build in progress |
+| Build status | Kernel, boot, system, recovery and two engineering ZIPs compiled | Kernel, boot, system, recovery and a separate engineering ZIP compiled |
 | Installer target | Separate `kltetmo` assertion | Separate `kltevzw` assertion |
 | Product capability | Voice off, SMS on, handset UI, BasicSmsReceiver | Standard voice and SMS resources, Dialer and Mms |
 | Telephony product | GSM/LTE preference, mode 9, CM APNs and retained Phone/TelephonyProvider/Stk | CDMA/LTE preference, mode 10, NV/RUIM settings |

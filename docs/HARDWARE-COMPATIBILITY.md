@@ -5,8 +5,8 @@ There is no physical validation for either target. “Configured” means a sour
 | Subsystem | Checkout status | Physical evidence still needed |
 | --- | --- | --- |
 | Kernel and board DT | Both S5 kernels and QCDT images compiled | Bootloader accepts image, kernel initializes board |
-| Init, partitions, early ADB | S5 ramdisk and SELinux policy assembled in the G900T boot image | Init logs, partition mounts, ADB and last_kmsg |
-| Launcher and Settings | G900T system image and recovery ZIP verified statically | SurfaceFlinger, Zygote, System Server, UI and handset settings |
+| Init, partitions, early ADB | S5 ramdisk and SELinux policy assembled in both boot images | Init logs, partition mounts, ADB and last_kmsg |
+| Launcher and Settings | System images and recovery ZIPs built for both variants. ZIPs verified statically | SurfaceFlinger, Zygote, System Server, UI and handset settings |
 | Display/touch/buttons | S5 kernel and target keymaps included | Panel, touchscreen, physical buttons and capacitive keys |
 | Accelerated graphics and media | JB MDSS/V4L2 candidates selected | ION/HWC/codec ABI, rendering and hardware decode |
 | Internal, microSD, USB, MTP | Jelly Bean FUSE syntax and vold records configured | Storage access, USB functions and MTP transfer |

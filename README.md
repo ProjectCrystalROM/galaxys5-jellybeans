@@ -8,4 +8,4 @@ A native CyanogenMod 10.2 / Android 4.3.1 reverse port in bring-up. SM-G900T (`k
 - [Hardware status](docs/HARDWARE-COMPATIBILITY.md) and [variant status](docs/VARIANT-COMPATIBILITY.md)
 - [Installation and recovery status](docs/INSTALLATION.md)
 
-The SM-G900T engineering ZIP passed static package verification. Physical boot and hardware validation are pending for both variants.
+Separate SM-G900T and SM-G900V engineering ZIPs passed static package verification. Physical boot and hardware validation are pending for both variants.

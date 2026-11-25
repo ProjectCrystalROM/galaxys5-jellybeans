@@ -31,7 +31,7 @@ The prebuilt step recovers the 2013 Terminal Emulator matching the library name 
 
 ## Isolated legacy build environment
 
-The [installed package lock](../manifest/trusty-build-packages.tsv) records the exact versions used. The verified environment uses Ubuntu 14.04 amd64 with GNU Make 3.81, GCC 4.8 host tools, Python 2.7.6 and OpenJDK 7 (`javac 1.7.0_201`). The target source pins the AOSP Android 4.3.1 ARM toolchains, including ARM EABI GCC 4.7 for the kernel. CM10.2 emits a warning about OpenJDK but accepts its Java 7 compiler. The modern host lacks Python 2 and its Java 21 compiler fails CM's version requirement.
+The [installed package lock](../manifest/trusty-build-packages.tsv) records the exact versions used. The verified environment uses Ubuntu 14.04 amd64 with GNU Make 3.81, GCC 4.8.4 host tools, Python 2.7.6 and OpenJDK 7 (`javac 1.7.0_201`). The target source pins the AOSP Android 4.3.1 ARM toolchains, including ARM EABI GCC 4.7 for the kernel. CM10.2 emits a warning about OpenJDK but accepts its Java 7 compiler. The modern host lacks Python 2 and its Java 21 compiler fails CM's version requirement.
 
 The [Ubuntu Trusty core amd64 image](https://partner-images.canonical.com/core/trusty/current/) used here has SHA-256 `e09b2c56f2239f08d97c085da8b81b47361cecf73e22063af20bf5cfbb967bc8`. Extract into a dedicated root filesystem. Configure its archive package lists for `trusty`, `trusty-updates` and `trusty-security` from `http://archive.ubuntu.com/ubuntu` with `main universe`, and provide DNS and usable `/dev` and `/proc` within the isolated environment for setup.
 
@@ -75,6 +75,7 @@ Before device use, review [blob compatibility](BLOB-COMPATIBILITY.md) and the [i
 
 - SM-G900T source-only build. Kernel, QCDT, boot, system, recovery and OTA compiled under Trusty. The staged archive is `out/engineering/kltetmo/cm_kltetmo-ota-70bd1fc4d2.zip` in this workspace. The verifier checked the archive CRCs, boot format, variant assertion, partition references, native Dalvik and required package contents.
 - SM-G900T graphics and thermal trial. Built and verified locally with the optional extraction profile from the pinned historical vendor archive. The ZIP includes 23 input files whose packaged hashes were compared with the extraction records. This output remains in the local Android output directory.
+- SM-G900V source-only build. Kernel, QCDT, boot, system, recovery and OTA compiled under Trusty. The staged archive is `out/engineering/kltevzw/cm_kltevzw-ota-df89e0d8ad.zip`. The verifier accepted the Verizon target, rejected it as a T-Mobile package, and confirmed the presence of Dialer and Mms. The compiled framework resources retain voice and SMS capability.
 - Standalone kernels. `out/kernel-kltetmo/` and `out/kernel-kltevzw/` hold verified Linux 3.4 zImages, DTBs, QCDT images and SHA-256 manifests. The two products use separate kernel builds and each DT image has seven board entries.
 
 ## Failure classification

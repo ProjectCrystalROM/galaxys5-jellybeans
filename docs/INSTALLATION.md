@@ -1,6 +1,6 @@
 # Installation and recovery status
 
-The SM-G900T engineering recovery ZIP has passed static format, variant and partition checks. A physical boot record is pending. The source-only package omits proprietary target inputs, and a separate local graphics and thermal trial includes selected candidates for eventual hardware bring-up.
+The separate SM-G900T and SM-G900V engineering recovery ZIPs passed static format, variant and partition checks. Physical boot remains pending for both. The source-only package omits proprietary target inputs, and a separate local graphics and thermal trial includes selected candidates for eventual hardware bring-up.
 
 For a future device session, record the model, current firmware build, recovery version, partition names, recovery device identifier and current ability to restore a model-matching backup. Copy the recovery backup and important data off the device. Use separate, validated recovery packages for `kltetmo` and `kltevzw`. A generic `klte` label in recovery needs independent confirmation before the installer assertions change. Bootloader unlock is outside the project.
 
