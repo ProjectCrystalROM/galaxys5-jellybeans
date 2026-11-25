@@ -5,7 +5,7 @@ PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
-PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=480 wifi.interface=wlan0
+PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=480 wifi.interface=wlan0 persist.sys.usb.config=mtp,adb
 
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
 $(call inherit-product-if-exists, vendor/samsung/klte-common/klte-common-vendor.mk)
