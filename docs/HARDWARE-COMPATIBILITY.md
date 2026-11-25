@@ -6,13 +6,13 @@ The SM-G900T now reaches `sys.boot_completed=1` and Setup Wizard. This is an ear
 | --- | --- | --- |
 | Kernel and board DT | Both S5 kernels and QCDT images compiled | Bootloader accepts image, kernel initializes board |
 | Recovery | Original image booted in preliminary device testing. Updated font and keys verified at build level | Check readability and physical button handling |
-| Init, partitions, ADB | G900T reaches completed Android boot. USB debugging had to be enabled manually; the host then authenticated and ADB works. `adb root` is currently disabled by the device's Root access setting. | Verify ADB behavior on cold boot; enable “Apps and ADB” in Developer options for root diagnostics |
+| Init, partitions, ADB | G900T reaches completed Android boot. USB debugging had to be enabled manually; the host then authenticated. Root access was subsequently enabled and `adb root` now returns uid 0. | Verify ADB behavior on cold boot |
 | Launcher and Settings | G900T reaches Setup Wizard; initial services and UI are available | Confirm sustained UI stability and usable Settings |
 | Display/touch/buttons | Display reaches Setup Wizard. Charge LED and capacitive-button lighting, including timeout, physically work | Touchscreen, physical buttons, and full UI interaction |
 | Accelerated graphics and media | JB MDSS/V4L2 candidates selected | ION/HWC/codec ABI, rendering and hardware decode |
 | Internal, microSD, USB, MTP | USB ADB works after manually enabling USB debugging and authorizing the host | Internal and microSD access, cold-boot USB behavior, MTP transfer |
-| Wi-Fi | G900T cannot use Wi-Fi yet. Boot log: `softap fwreload wlan0 STA` returns 501, then `wpa_supplicant` cannot unlink the existing `@android:wpa_wlan0` control socket and fails initialization | Inspect firmware/driver state and supplicant socket ownership with root diagnostics; scan and connect |
-| Bluetooth | G900T Bluetooth turns on and scans. Pairing and audio path not tested | Pairing, connection, audio, transfer, suspend/resume |
+| Wi-Fi | G900T cannot use Wi-Fi yet. `wlan0` exists but is down. The image lacks the S5 Broadcom `bcmdhd_{sta,apsta,mfg}.bin` and NVRAM files under `/system/etc/wifi`. Boot log: `softap fwreload wlan0 STA` returns 501, then `wpa_supplicant` fails on its control socket | Add and validate target Wi-Fi firmware/NVRAM inputs; retest driver startup, scan and connection |
+| Bluetooth | G900T Bluetooth turns on and scans. Boot log says firmware patch discovery failed. Pairing and audio path not tested | Identify and add the correct firmware patch; test pairing, connection, audio, transfer and suspend/resume |
 | Audio | JB CAF and S5 routing selected; boot log shows primary ALSA HAL fails sound-card detection | Speaker/headset playback, microphone recording and internet voice |
 | GPS, sensor, camera | Candidate inventories available, integration pending | GNSS fix, sensor event delivery, photo/video capture |
 | Charge, thermal, power | S5 kernel protections and target thermal configuration included | Charging/temperature readings, daemon compatibility, charge limits, suspend and power behavior |
