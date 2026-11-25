@@ -2,7 +2,7 @@
 
 This checkpoint is for source and build bring-up. A recovery ZIP and physical boot record are pending. Kernel and DT outputs are engineering artifacts.
 
-For a future device session, record the model, current firmware build, recovery version, partition names, recovery device identifier and current ability to restore a model-matching backup. Copy the recovery backup and important data off the device. Use separate, validated recovery packages for `kltetmo` and `kltevzw`; a generic `klte` label in recovery needs independent confirmation before the installer assertions change. Bootloader unlock is outside the project.
+For a future device session, record the model, current firmware build, recovery version, partition names, recovery device identifier and current ability to restore a model-matching backup. Copy the recovery backup and important data off the device. Use separate, validated recovery packages for `kltetmo` and `kltevzw`. A generic `klte` label in recovery needs independent confirmation before the installer assertions change. Bootloader unlock is outside the project.
 
 The recovery package should write the variant's boot and system partitions only. Keep the device's recovery, modem firmware, bootloader, EFS and partition table intact. Verify the package manifest and updater script before installation. During the first device session, verify charge reporting and thermal protections before sustained testing. Stop the session on a thermal or charging fault.
 

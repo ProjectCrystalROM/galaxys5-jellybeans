@@ -14,4 +14,4 @@
 
 The initial installer identity is variant-specific. Recovery partition mappings and device assertions require comparison with each model's actual recovery environment. Modem firmware, bootloaders, EFS images and partition tables are outside the installer payload.
 
-Native public-carrier voice, native emergency calls and an outgoing SMS UI are intentionally excluded from the T-Mobile product. It is unsuitable as a primary emergency-capable phone. IMS and VoLTE are outside scope for both variants; CDMA voice and EVDO on CrystalBTS remain in scope for Verizon.
+Native public-carrier voice, native emergency calls and an outgoing SMS UI are intentionally excluded from the T-Mobile product. It is unsuitable as a primary emergency-capable phone. IMS and VoLTE are outside scope for both variants. CDMA voice and EVDO on CrystalBTS remain in scope for Verizon.
