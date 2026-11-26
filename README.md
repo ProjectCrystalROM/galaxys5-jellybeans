@@ -4,6 +4,7 @@ A native CyanogenMod 10.2 / Android 4.3.1 reverse port for the Qualcomm Galaxy S
 
 - [Build and source sync](docs/BUILD.md)
 - [Historical sources and engineering decisions](docs/PORTING-RESEARCH.md)
+- [CM9 feasibility assessment](docs/CM9-FEASIBILITY.md)
 - [Proprietary libraries and ABI status](docs/BLOB-COMPATIBILITY.md)
 - [Hardware status](docs/HARDWARE-COMPATIBILITY.md) and [variant status](docs/VARIANT-COMPATIBILITY.md)
 - [Installation and recovery status](docs/INSTALLATION.md)
