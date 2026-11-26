@@ -20,7 +20,7 @@ repo sync -c -j12
 
 The staging script applies the pinned local kernel, init, audio, notification, APN, and telephony patches idempotently, then adds the Crystal APN entry. A clean tree staged with this script reproduces the source modifications recorded for the current milestone.
 
-Project members can recover the exact extracted G900T/common vendor snapshot instead of re-extracting it from firmware by cloning [the private vendor backup](https://github.com/ProjectCrystalROM/proprietary_vendor_samsung_klte) at `vendor/samsung`. Its `klte-common/` and `kltetmo/` trees include source provenance and SHA-256 manifests. This snapshot has no Verizon-specific vendor tree.
+The exact extracted G900T/common vendor snapshot can be cloned from the public [ProjectCrystalROM vendor repository](https://github.com/ProjectCrystalROM/proprietary_vendor_samsung_klte) at `vendor/samsung`. Its `klte-common/` and `kltetmo/` trees include source provenance and SHA-256 manifests. This snapshot has no Verizon-specific vendor tree.
 
 The checked-in GitHub remote allows anonymous cloning. On a machine configured for GitHub SSH, scope a rewrite to the sync command.
 

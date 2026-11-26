@@ -3,6 +3,7 @@
 A native CyanogenMod 10.2 / Android 4.3.1 reverse port for the Qualcomm Galaxy S5. SM-G900T (`kltetmo`) is the primary data-centric product. SM-G900V (`kltevzw`) shares the platform with separate radio and voice-capable product settings.
 
 - [Build and source sync](docs/BUILD.md)
+- [Extracted Galaxy S5 vendor snapshot](https://github.com/ProjectCrystalROM/proprietary_vendor_samsung_klte)
 - [Historical sources and engineering decisions](docs/PORTING-RESEARCH.md)
 - [CM9 feasibility assessment](docs/CM9-FEASIBILITY.md)
 - [Proprietary libraries and ABI status](docs/BLOB-COMPATIBILITY.md)
