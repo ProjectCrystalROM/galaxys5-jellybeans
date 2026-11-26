@@ -1,0 +1,30 @@
+diff --git a/src/java/com/android/internal/telephony/dataconnection/DcTracker.java b/src/java/com/android/internal/telephony/dataconnection/DcTracker.java
+index 57bbd54..ae39009 100644
+--- a/src/java/com/android/internal/telephony/dataconnection/DcTracker.java
++++ b/src/java/com/android/internal/telephony/dataconnection/DcTracker.java
+@@ -1074,6 +1074,12 @@ public class DcTracker extends DcTrackerBase {
+     }
+ 
+     private boolean mvnoMatches(IccRecords r, String mvno_type, String mvno_match_data) {
++        // Older/vendor APN databases can contain NULL for the optional MVNO fields.
++        // Such rows are ordinary APNs, not a reason to take down the phone process.
++        if (r == null || TextUtils.isEmpty(mvno_type) || TextUtils.isEmpty(mvno_match_data)) {
++            return false;
++        }
++
+         if (mvno_type.equalsIgnoreCase("spn")) {
+             if ((r.getServiceProviderName() != null) &&
+                     r.getServiceProviderName().equalsIgnoreCase(mvno_match_data)) {
+@@ -1139,6 +1145,12 @@ public class DcTracker extends DcTrackerBase {
+                         cursor.getColumnIndexOrThrow(Telephony.Carriers.MVNO_TYPE));
+                 String cursorMvnoMatchData = cursor.getString(
+                         cursor.getColumnIndexOrThrow(Telephony.Carriers.MVNO_MATCH_DATA));
++                if (cursorMvnoType == null) {
++                    cursorMvnoType = "";
++                }
++                if (cursorMvnoMatchData == null) {
++                    cursorMvnoMatchData = "";
++                }
+                 if (mvnoType != null) {
+                     if (mvnoType.equals(cursorMvnoType) &&
+                             mvnoMatchData.equals(cursorMvnoMatchData)) {

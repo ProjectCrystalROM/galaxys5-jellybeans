@@ -1,0 +1,86 @@
+diff --git a/alsa_sound/AudioHardwareALSA.cpp b/alsa_sound/AudioHardwareALSA.cpp
+index 029a90c..53232ab 100644
+--- a/alsa_sound/AudioHardwareALSA.cpp
++++ b/alsa_sound/AudioHardwareALSA.cpp
+@@ -147,11 +147,6 @@ AudioHardwareALSA::AudioHardwareALSA() :
+     acdb_deallocate = NULL;
+ #endif
+ 
+-    mALSADevice = new ALSADevice();
+-    if (!mALSADevice) {
+-        mStatus = NO_INIT;
+-        return;
+-    }
+ #ifdef QCOM_ACDB_ENABLED
+     mAcdbHandle = ::dlopen("/system/lib/libacdbloader.so", RTLD_NOW);
+     if (mAcdbHandle == NULL) {
+@@ -166,9 +161,9 @@ AudioHardwareALSA::AudioHardwareALSA() :
+            acdb_deallocate = (void (*)())::dlsym(mAcdbHandle,"acdb_loader_deallocate_ACDB");
+         }
+     }
+-    mALSADevice->setACDBHandle(mAcdbHandle);
+ #endif
+ 
++retry_sound_card:
+     if((fp = fopen("/proc/asound/cards","r")) == NULL) {
+         ALOGE("Cannot open /proc/asound/cards file to get sound card info");
+         mStatus = NO_INIT;
+@@ -212,19 +207,11 @@ AudioHardwareALSA::AudioHardwareALSA() :
+                 break;
+             } else if(strstr(soundCardInfo, "no soundcards")) {
+                 ALOGE("NO SOUND CARD DETECTED");
+-                if(sleep_retry < SOUND_CARD_SLEEP_RETRY) {
+-                    ALOGD("Sleeping for 100 ms");
+-                    usleep(SOUND_CARD_SLEEP_WAIT * 1000);
+-                    sleep_retry++;
+-                    fseek(fp, 0, SEEK_SET);
+-                    continue;
+-                }
+-                else {
+-                    ALOGE("Failed %d attempts for sound card detection", sleep_retry);
+-                    fclose(fp);
+-                    mStatus = NO_INIT;
+-                    return;
+-                }
++                fclose(fp);
++                fp = NULL;
++                ALOGD("Waiting for sound card registration before creating ALSA device");
++                usleep(SOUND_CARD_SLEEP_WAIT * 1000);
++                goto retry_sound_card;
+             } else {
+                 ALOGE("ERROR - Sound card detection");
+                 fclose(fp);
+@@ -235,6 +222,21 @@ AudioHardwareALSA::AudioHardwareALSA() :
+         fclose(fp);
+     }
+ 
++    /* ALSADevice opens /dev/snd/controlC0 in its constructor. Wait for both the
++     * card and its mixer node or the mixer handle stays null. */
++    while (access("/dev/snd/controlC0", F_OK) != 0) {
++        ALOGD("Waiting for /dev/snd/controlC0 before creating ALSA device");
++        usleep(SOUND_CARD_SLEEP_WAIT * 1000);
++    }
++    mALSADevice = new ALSADevice();
++    if (!mALSADevice) {
++        mStatus = NO_INIT;
++        return;
++    }
++#ifdef QCOM_ACDB_ENABLED
++    mALSADevice->setACDBHandle(mAcdbHandle);
++#endif
++
+     sleep_retry = 0;
+     while (audio_init_done == false && sleep_retry < MAX_SLEEP_RETRY) {
+         property_get("qcom.audio.init", audio_init, NULL);
+diff --git a/alsa_sound/AudioHardwareALSA.h b/alsa_sound/AudioHardwareALSA.h
+index 0a6ee01..8e2dd47 100644
+--- a/alsa_sound/AudioHardwareALSA.h
++++ b/alsa_sound/AudioHardwareALSA.h
+@@ -206,7 +206,6 @@ static int USBRECBIT_FM = (1 << 3);
+ /* Rear right of center. */
+ #define PCM_CHANNEL_RRC  16
+ 
+-#define SOUND_CARD_SLEEP_RETRY 5  /*  Will check 5 times before continuing */
+ #define SOUND_CARD_SLEEP_WAIT 100 /* 100 ms */
+ 
+ #define VOICE_SESSION_VSID   0x01

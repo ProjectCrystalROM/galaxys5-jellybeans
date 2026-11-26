@@ -15,7 +15,7 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default audio.usb.default \
     copybit.msm8974 gralloc.msm8974 hwcomposer.msm8974 libstagefrighthw \
     libOmxCore libOmxVdec libOmxVenc lib_driver_cmd_bcmdhd \
-    lights.msm8974 klte_macloader rild
+    lights.msm8974 klte_macloader libnetcmdiface
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/fstab.qcom:root/fstab.qcom \
@@ -25,11 +25,13 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/init.sec.boot.sh:system/etc/init.sec.boot.sh \
     $(LOCAL_PATH)/rootdir/init.crda.sh:system/etc/init.crda.sh \
     $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
+    $(LOCAL_PATH)/audio/snd_soc_msm_Taiko:system/etc/snd_soc_msm/snd_soc_msm_Taiko \
     $(LOCAL_PATH)/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
     $(LOCAL_PATH)/audio/mixer_paths.xml:system/etc/mixer_paths.xml \
     $(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
     $(LOCAL_PATH)/configs/thermal-engine-8974.conf:system/etc/thermal-engine-8974.conf \
     $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml \
+    $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
     $(LOCAL_PATH)/configs/gps.conf:system/etc/gps.conf \
     $(LOCAL_PATH)/configs/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
     $(LOCAL_PATH)/configs/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \

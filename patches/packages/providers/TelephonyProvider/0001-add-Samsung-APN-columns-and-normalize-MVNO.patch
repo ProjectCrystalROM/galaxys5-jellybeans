@@ -1,0 +1,56 @@
+diff --git a/src/com/android/providers/telephony/TelephonyProvider.java b/src/com/android/providers/telephony/TelephonyProvider.java
+index 1de6f1b..8b45e98 100644
+--- a/src/com/android/providers/telephony/TelephonyProvider.java
++++ b/src/com/android/providers/telephony/TelephonyProvider.java
+@@ -61,7 +61,7 @@ public class TelephonyProvider extends ContentProvider
+     private static final String DATABASE_NAME = "telephony.db";
+     private static final boolean DBG = true;
+ 
+-    private static final int DATABASE_VERSION = 9 << 16;
++    private static final int DATABASE_VERSION = 11 << 16;
+     private static final int URL_TELEPHONY = 1;
+     private static final int URL_CURRENT = 2;
+     private static final int URL_ID = 3;
+@@ -156,8 +156,12 @@ public class TelephonyProvider extends ContentProvider
+                     "roaming_protocol TEXT," +
+                     "carrier_enabled BOOLEAN," +
+                     "bearer INTEGER," +
+-                    "mvno_type TEXT," +
+-                    "mvno_match_data TEXT," +
++                    "mvno_type TEXT DEFAULT ''," +
++                    "mvno_match_data TEXT DEFAULT ''," +
++                    // Samsung's Qualcomm RIL queries these connection limits directly.
++                    "max_conn INTEGER DEFAULT 0," +
++                    "max_conn_t INTEGER DEFAULT 0," +
++                    "wait_time INTEGER DEFAULT 0," +
+                     "preferred BOOLEAN DEFAULT 0);");
+ 
+             initDatabase(db);
+@@ -276,6 +280,27 @@ public class TelephonyProvider extends ContentProvider
+                         " ADD COLUMN preferred BOOLEAN DEFAULT 0;");
+                 oldVersion = 9 << 16 | 6;
+             }
++            if (oldVersion < (10 << 16 | 6)) {
++                // Samsung Qualcomm RILs read these APN connection limits directly.
++                // CM10.2 did not use them, so existing and newly seeded APNs default
++                // to no connection limit and no additional wait interval.
++                db.execSQL("ALTER TABLE " + CARRIERS_TABLE +
++                        " ADD COLUMN max_conn INTEGER DEFAULT 0;");
++                db.execSQL("ALTER TABLE " + CARRIERS_TABLE +
++                        " ADD COLUMN max_conn_t INTEGER DEFAULT 0;");
++                db.execSQL("ALTER TABLE " + CARRIERS_TABLE +
++                        " ADD COLUMN wait_time INTEGER DEFAULT 0;");
++                oldVersion = 10 << 16 | 6;
++            }
++            if (oldVersion < (11 << 16 | 6)) {
++                // Normalize NULL MVNO metadata from manually inserted/vendor APNs.
++                // DcTracker treats these empty fields as a regular (non-MVNO) APN.
++                db.execSQL("UPDATE " + CARRIERS_TABLE +
++                        " SET mvno_type='' WHERE mvno_type IS NULL;");
++                db.execSQL("UPDATE " + CARRIERS_TABLE +
++                        " SET mvno_match_data='' WHERE mvno_match_data IS NULL;");
++                oldVersion = 11 << 16 | 6;
++            }
+         }
+ 
+         /**

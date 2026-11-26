@@ -1,0 +1,27 @@
+diff --git a/packages/SystemUI/src/com/android/systemui/media/NotificationPlayer.java b/packages/SystemUI/src/com/android/systemui/media/NotificationPlayer.java
+index 8979fc2f..8a44cf08 100644
+--- a/packages/SystemUI/src/com/android/systemui/media/NotificationPlayer.java
++++ b/packages/SystemUI/src/com/android/systemui/media/NotificationPlayer.java
+@@ -20,6 +20,7 @@ import android.content.Context;
+ import android.media.AudioManager;
+ import android.media.MediaPlayer;
+ import android.media.MediaPlayer.OnCompletionListener;
++import android.media.RingtoneManager;
+ import android.net.Uri;
+ import android.os.Looper;
+ import android.os.PowerManager;
+@@ -81,7 +82,13 @@ public class NotificationPlayer implements OnCompletionListener {
+                 try {
+                     MediaPlayer player = new MediaPlayer();
+                     player.setAudioStreamType(mCmd.stream);
+-                    player.setDataSource(mCmd.context, mCmd.uri);
++                    Uri soundUri = mCmd.uri;
++                    int defaultType = RingtoneManager.getDefaultType(soundUri);
++                    if (defaultType != -1) {
++                        soundUri = RingtoneManager.getActualDefaultRingtoneUri(
++                                mCmd.context, defaultType);
++                    }
++                    player.setDataSource(mCmd.context, soundUri);
+                     player.setLooping(mCmd.looping);
+                     player.prepare();
+                     if ((mCmd.uri != null) && (mCmd.uri.getEncodedPath() != null)

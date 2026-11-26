@@ -1,0 +1,22 @@
+diff --git a/arch/arm/configs/msm8974pro_sec_klte_eur_defconfig b/arch/arm/configs/msm8974pro_sec_klte_eur_defconfig
+--- a/arch/arm/configs/msm8974pro_sec_klte_eur_defconfig
++++ b/arch/arm/configs/msm8974pro_sec_klte_eur_defconfig
+@@ -181,6 +181,11 @@ CONFIG_HID=y
+ # BT
+ #
+ CONFIG_BT_BCM4354=y
++CONFIG_BT_RFCOMM=y
++CONFIG_BT_RFCOMM_TTY=y
++CONFIG_BT_BNEP=y
++CONFIG_BT_BNEP_MC_FILTER=y
++CONFIG_BT_BNEP_PROTO_FILTER=y
+ 
+ #
+ # extcon
+@@ -210,4 +215,6 @@
+ #CONFIG_SDP=y
+ 
+ #optimize mmc block delay on resume
+ CONFIG_MMC_BLOCK_DEFERRED_RESUME=y
++CONFIG_PPP_ASYNC=y
++CONFIG_PPP_SYNC_TTY=y
