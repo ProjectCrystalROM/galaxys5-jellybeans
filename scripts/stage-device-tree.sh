@@ -55,6 +55,14 @@ else
     git -C "$provider_dir" apply --check "$provider_patch"
     git -C "$provider_dir" apply "$provider_patch"
 fi
+lockclock_dir=$tree/packages/apps/LockClock
+lockclock_patch=$project/patches/packages/apps/LockClock/0001-use-Open-Meteo-for-weather.patch
+if git -C "$lockclock_dir" apply --reverse --check "$lockclock_patch" >/dev/null 2>&1; then
+    : # The patch is already staged.
+else
+    git -C "$lockclock_dir" apply --check "$lockclock_patch"
+    git -C "$lockclock_dir" apply "$lockclock_patch"
+fi
 frameworks_dir=$tree/frameworks/base
 notification_patch=$project/patches/frameworks/base/packages/SystemUI/0001-resolve-default-notification-sound-uri.patch
 if git -C "$frameworks_dir" apply --reverse --check "$notification_patch" >/dev/null 2>&1; then

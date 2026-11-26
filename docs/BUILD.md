@@ -18,7 +18,9 @@ repo sync -c -j12
 "$project/scripts/fetch-cm-prebuilts.sh" "$android_tree"
 ```
 
-The staging script applies the pinned local kernel, init, audio, notification, APN, and telephony patches idempotently, then adds the Crystal APN entry. A clean tree staged with this script reproduces the source modifications recorded for the current milestone.
+The staging script applies the pinned local kernel, init, audio, notification, APN, telephony, and LockClock weather patches idempotently, then adds the Crystal APN entry. A clean tree staged with this script reproduces the source modifications recorded for the current milestone.
+
+LockClock's weather provider uses the Open-Meteo geocoding and forecast APIs. Open-Meteo's free hosted API is limited to non-commercial use and has published request quotas; the app links to its CC BY 4.0 attribution/license page from Weather settings. The CM10.2 CA bundle predates the current Let's Encrypt chain, so LockClock carries the public ISRG Root X1 certificate and combines it with the platform trust roots for HTTPS. Hostname verification remains enabled. This is app-local and does not alter Android's system CA store. See [Open-Meteo terms](https://open-meteo.com/en/terms) before redistributing or using the build in a commercial service.
 
 The exact extracted G900T/common vendor snapshot can be cloned from the public [ProjectCrystalROM vendor repository](https://github.com/ProjectCrystalROM/proprietary_vendor_samsung_klte) at `vendor/samsung`. Its `klte-common/` and `kltetmo/` trees include source provenance and SHA-256 manifests. This snapshot has no Verizon-specific vendor tree.
 

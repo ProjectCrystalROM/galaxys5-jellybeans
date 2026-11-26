@@ -1,0 +1,1151 @@
+diff --git a/res/raw/isrg_root_x1.pem b/res/raw/isrg_root_x1.pem
+new file mode 100644
+index 0000000..b85c803
+--- /dev/null
++++ b/res/raw/isrg_root_x1.pem
+@@ -0,0 +1,31 @@
++-----BEGIN CERTIFICATE-----
++MIIFazCCA1OgAwIBAgIRAIIQz7DSQONZRGPgu2OCiwAwDQYJKoZIhvcNAQELBQAw
++TzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2Vh
++cmNoIEdyb3VwMRUwEwYDVQQDEwxJU1JHIFJvb3QgWDEwHhcNMTUwNjA0MTEwNDM4
++WhcNMzUwNjA0MTEwNDM4WjBPMQswCQYDVQQGEwJVUzEpMCcGA1UEChMgSW50ZXJu
++ZXQgU2VjdXJpdHkgUmVzZWFyY2ggR3JvdXAxFTATBgNVBAMTDElTUkcgUm9vdCBY
++MTCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBAK3oJHP0FDfzm54rVygc
++h77ct984kIxuPOZXoHj3dcKi/vVqbvYATyjb3miGbESTtrFj/RQSa78f0uoxmyF+
++0TM8ukj13Xnfs7j/EvEhmkvBioZxaUpmZmyPfjxwv60pIgbz5MDmgK7iS4+3mX6U
++A5/TR5d8mUgjU+g4rk8Kb4Mu0UlXjIB0ttov0DiNewNwIRt18jA8+o+u3dpjq+sW
++T8KOEUt+zwvo/7V3LvSye0rgTBIlDHCNAymg4VMk7BPZ7hm/ELNKjD+Jo2FR3qyH
++B5T0Y3HsLuJvW5iB4YlcNHlsdu87kGJ55tukmi8mxdAQ4Q7e2RCOFvu396j3x+UC
++B5iPNgiV5+I3lg02dZ77DnKxHZu8A/lJBdiB3QW0KtZB6awBdpUKD9jf1b0SHzUv
++KBds0pjBqAlkd25HN7rOrFleaJ1/ctaJxQZBKT5ZPt0m9STJEadao0xAH0ahmbWn
++OlFuhjuefXKnEgV4We0+UXgVCwOPjdAvBbI+e0ocS3MFEvzG6uBQE3xDk3SzynTn
++jh8BCNAw1FtxNrQHusEwMFxIt4I7mKZ9YIqioymCzLq9gwQbooMDQaHWBfEbwrbw
++qHyGO0aoSCqI3Haadr8faqU9GY/rOPNk3sgrDQoo//fb4hVC1CLQJ13hef4Y53CI
++rU7m2Ys6xt0nUW7/vGT1M0NPAgMBAAGjQjBAMA4GA1UdDwEB/wQEAwIBBjAPBgNV
++HRMBAf8EBTADAQH/MB0GA1UdDgQWBBR5tFnme7bl5AFzgAiIyBpY9umbbjANBgkq
++hkiG9w0BAQsFAAOCAgEAVR9YqbyyqFDQDLHYGmkgJykIrGF1XIpu+ILlaS/V9lZL
++ubhzEFnTIZd+50xx+7LSYK05qAvqFyFWhfFQDlnrzuBZ6brJFe+GnY+EgPbk6ZGQ
++3BebYhtF8GaV0nxvwuo77x/Py9auJ/GpsMiu/X1+mvoiBOv/2X/qkSsisRcOj/KK
++NFtY2PwByVS5uCbMiogziUwthDyC3+6WVwW6LLv3xLfHTjuCvjHIInNzktHCgKQ5
++ORAzI4JMPJ+GslWYHb4phowim57iaztXOoJwTdwJx4nLCgdNbOhdjsnvzqvHu7Ur
++TkXWStAmzOVyyghqpZXjFaH3pO3JLF+l+/+sKAIuvtd7u+Nxe5AW0wdeRlN8NwdC
++jNPElpzVmbUq4JUagEiuTDkHzsxHpFKVK7q4+63SM1N95R1NbdWhscdCb+ZAJzVc
++oyi3B43njTOQ5yOf+1CceWxG1bQVs5ZufpsMljq4Ui0/1lvh+wjChP4kqKOJ2qxq
++4RgqsahDYVvTH9w7jXbyLeiNdd8XM2w9U/t7y0Ff/9yi0GE44Za4rF2LN9d11TPA
++mRGunUHBcnWEvgJBQl9nJEiU0Zsnvgc/ubhPgXRR4Xq37Z0j4r7g1SgEEzwxA57d
++emyPxgcYxn/eR44/KJ4EBs+lVDR3veyJm+kXQ99b21/+jh5Xos1AnX5iItreGCc=
++-----END CERTIFICATE-----
+diff --git a/res/values-af/strings.xml b/res/values-af/strings.xml
+index 1dc713d..76a4615 100644
+--- a/res/values-af/strings.xml
++++ b/res/values-af/strings.xml
+@@ -102,7 +102,7 @@
+     <string name="clock_am_pm_title">Wys VM/NM indikator</string>
+     <string name="weather_enabled">Geaktiveer</string>
+     <string name="weather_enable">Weerpaneel sigbaar</string>
+-    <string name="weather_source">Yahoo! weer</string>
++    <string name="weather_source">Open-Meteo</string>
+     <string name="weather_use_custom_location">Gebruik persoonlike ligging</string>
+     <string name="weather_geolocated">Geoligging bepaal deur die netwerk</string>
+     <string name="weather_custom_location_dialog_title">Voer ligging in</string>
+diff --git a/res/values-ca/strings.xml b/res/values-ca/strings.xml
+index 3058914..9a5f1e8 100644
+--- a/res/values-ca/strings.xml
++++ b/res/values-ca/strings.xml
+@@ -102,7 +102,7 @@
+     <string name="clock_am_pm_title">Mostra l\'indicador AM/PM</string>
+     <string name="weather_enabled">Activat</string>
+     <string name="weather_enable">Mostra el temps</string>
+-    <string name="weather_source">Temps de Yahoo!</string>
++    <string name="weather_source">Open-Meteo</string>
+     <string name="weather_use_custom_location">Utilitza una ubic. personalitzada</string>
+     <string name="weather_geolocated">Geolocalitzat utilitzant la xarxa</string>
+     <string name="weather_custom_location_dialog_title">Introdueix ubicació</string>
+diff --git a/res/values-cs/strings.xml b/res/values-cs/strings.xml
+index 1a94460..f164cf5 100644
+--- a/res/values-cs/strings.xml
++++ b/res/values-cs/strings.xml
+@@ -107,7 +107,7 @@
+ 
+     <string name="weather_enabled">Použít</string>
+     <string name="weather_enable">Zobrazit počasí</string>
+-    <string name="weather_source">Yahoo! Počasí</string>
++    <string name="weather_source">Open-Meteo</string>
+     <string name="weather_use_custom_location">Použít vlastní polohu</string>
+     <string name="weather_geolocated">Zjistit polohu ze sítě</string>
+     <string name="weather_custom_location_dialog_title">Zadat polohu</string>
+diff --git a/res/values-da/strings.xml b/res/values-da/strings.xml
+index 5c2024f..746656f 100644
+--- a/res/values-da/strings.xml
++++ b/res/values-da/strings.xml
+@@ -101,7 +101,7 @@
+     <string name="clock_am_pm_title">AM/PM-indikator</string>
+     <string name="weather_enabled">Aktiveret</string>
+     <string name="weather_enable">Vis vejr</string>
+-    <string name="weather_source">Yahoo! Vejret</string>
++    <string name="weather_source">Open-Meteo</string>
+     <string name="weather_use_custom_location">Brug alternativ lokation</string>
+     <string name="weather_geolocated">Geolokation med netværk</string>
+     <string name="weather_custom_location_dialog_title">Indtast lokation</string>
+diff --git a/res/values-de/strings.xml b/res/values-de/strings.xml
+index b24b257..c455a91 100644
+--- a/res/values-de/strings.xml
++++ b/res/values-de/strings.xml
+@@ -103,7 +103,7 @@
+     <string name="clock_am_pm_title">Vorm./Nachm. anzeigen</string>
+     <string name="weather_enabled">Aktiviert</string>
+     <string name="weather_enable">Wetter anzeigen</string>
+-    <string name="weather_source">Yahoo! Wetter</string>
++    <string name="weather_source">Open-Meteo</string>
+     <string name="weather_use_custom_location">Benutzerdefinierter Standort</string>
+     <string name="weather_geolocated">Über Standortdienste bestimmt</string>
+     <string name="weather_custom_location_dialog_title">Standort eingeben</string>
+diff --git a/res/values-el/strings.xml b/res/values-el/strings.xml
+index 13ac771..e89a45b 100644
+--- a/res/values-el/strings.xml
++++ b/res/values-el/strings.xml
+@@ -101,7 +101,7 @@
+     <string name="clock_am_pm_title">Εμφάνιση ένδειξης ΠΜ/ΜΜ</string>
+     <string name="weather_enabled">Ενεργό</string>
+     <string name="weather_enable">Εμφάνιση καιρού</string>
+-    <string name="weather_source">Καιρός Yahoo!</string>
++    <string name="weather_source">Open-Meteo</string>
+     <string name="weather_use_custom_location">Χρήση προσαρμοσμένης τοποθεσίας</string>
+     <string name="weather_geolocated">Εντοπισμός τοποθεσίας μέσω δικτύου</string>
+     <string name="weather_custom_location_dialog_title">Εισάγετε τοποθεσία</string>
+diff --git a/res/values-es/strings.xml b/res/values-es/strings.xml
+index a265016..3ad9546 100644
+--- a/res/values-es/strings.xml
++++ b/res/values-es/strings.xml
+@@ -102,7 +102,7 @@
+     <string name="clock_am_pm_title">Mostrar indicador AM/PM</string>
+     <string name="weather_enabled">Activado</string>
+     <string name="weather_enable">Mostrar clima</string>
+-    <string name="weather_source">Yahoo! El Tiempo</string>
++    <string name="weather_source">Open-Meteo</string>
+     <string name="weather_use_custom_location">Usar ubicación personalizada</string>
+     <string name="weather_geolocated">Geolocalización por red</string>
+     <string name="weather_custom_location_dialog_title">Introducir ubicación</string>
+diff --git a/res/values-fi/strings.xml b/res/values-fi/strings.xml
+index fd46137..4172de5 100644
+--- a/res/values-fi/strings.xml
++++ b/res/values-fi/strings.xml
+@@ -116,7 +116,7 @@
+     <!-- Preferences - Weather -->
+     <string name="weather_enabled">Käytössä</string>
+     <string name="weather_enable">Näytä sää</string>
+-    <string name="weather_source">Yahoo! Sää</string>
++    <string name="weather_source">Open-Meteo</string>
+     <string name="weather_use_custom_location">Käytä itse valittua sijaintia</string>
+     <string name="weather_geolocated">Paikannettu verkon avulla</string>
+     <string name="weather_custom_location_dialog_title">Syötä sijainti</string>
+diff --git a/res/values-fr/strings.xml b/res/values-fr/strings.xml
+index 19f08a9..6abdac6 100644
+--- a/res/values-fr/strings.xml
++++ b/res/values-fr/strings.xml
+@@ -102,7 +102,7 @@
+     <string name="clock_am_pm_title">Afficher l\'indicateur AM/PM</string>
+     <string name="weather_enabled">Activer</string>
+     <string name="weather_enable">Afficher la météo</string>
+-    <string name="weather_source">Yahoo! Météo</string>
++    <string name="weather_source">Open-Meteo</string>
+     <string name="weather_use_custom_location">Définir un lieu</string>
+     <string name="weather_geolocated">Utiliser la géolocalisation</string>
+     <string name="weather_custom_location_dialog_title">Définir un lieu</string>
+diff --git a/res/values-hu/strings.xml b/res/values-hu/strings.xml
+index 248a38b..6d7a43f 100644
+--- a/res/values-hu/strings.xml
++++ b/res/values-hu/strings.xml
+@@ -121,7 +121,7 @@
+     <!-- Preferences - Weather -->
+     <string name="weather_enabled">Engedélyezve</string>
+     <string name="weather_enable">Időjárás megjelenítése</string>
+-    <string name="weather_source">Yahoo! időjárás</string>
++    <string name="weather_source">Open-Meteo</string>
+     <string name="weather_use_custom_location">Egyéni hely használata</string>
+     <string name="weather_geolocated">Helyzetmeghatározás</string>
+     <string name="weather_custom_location_dialog_title">Hely megadása</string>
+diff --git a/res/values-it/strings.xml b/res/values-it/strings.xml
+index 2c4bb4a..3ece04e 100644
+--- a/res/values-it/strings.xml
++++ b/res/values-it/strings.xml
+@@ -102,7 +102,7 @@
+     <string name="clock_am_pm_title">Mostra l\'indicatore AM/PM</string>
+     <string name="weather_enabled">Attivo</string>
+     <string name="weather_enable">Visualizza meteo</string>
+-    <string name="weather_source">Yahoo! Meteo</string>
++    <string name="weather_source">Open-Meteo</string>
+     <string name="weather_use_custom_location">Posizione personalizzata</string>
+     <string name="weather_geolocated">Localizzazione tramite la rete</string>
+     <string name="weather_custom_location_dialog_title">Inserisci la posizione</string>
+diff --git a/res/values-ja/strings.xml b/res/values-ja/strings.xml
+index 3a86df1..16a1bae 100644
+--- a/res/values-ja/strings.xml
++++ b/res/values-ja/strings.xml
+@@ -119,7 +119,7 @@
+     <!-- Preferences - Weather -->
+     <string name="weather_enabled">有効</string>
+     <string name="weather_enable">天気を表示する</string>
+-    <string name="weather_source">Yahoo! Weather</string>
++    <string name="weather_source">Open-Meteo</string>
+     <string name="weather_use_custom_location">カスタムの場所</string>
+     <string name="weather_geolocated">ネットーワークを使った位置情報</string>
+     <string name="weather_custom_location_dialog_title">場所を入力</string>
+diff --git a/res/values-lt/strings.xml b/res/values-lt/strings.xml
+index 5409093..0170a6b 100644
+--- a/res/values-lt/strings.xml
++++ b/res/values-lt/strings.xml
+@@ -99,7 +99,7 @@
+     <string name="clock_am_pm_title">Rodyti AM/PM indikatorių</string>
+     <string name="weather_enabled">Įjungta</string>
+     <string name="weather_enable">Rodyti orus</string>
+-    <string name="weather_source">Yahoo! Weather</string>
++    <string name="weather_source">Open-Meteo</string>
+     <string name="weather_use_custom_location">Naudoti savitą vietovę</string>
+     <string name="weather_geolocated">Nustatyta naudojant tinklą</string>
+     <string name="weather_custom_location_dialog_title">Įveskite vietovę</string>
+diff --git a/res/values-nb/strings.xml b/res/values-nb/strings.xml
+index 220d341..f61c139 100644
+--- a/res/values-nb/strings.xml
++++ b/res/values-nb/strings.xml
+@@ -100,7 +100,7 @@
+     <string name="show_alarm_title">Vis neste alarm</string>
+     <string name="weather_enabled">Aktivert</string>
+     <string name="weather_enable">Vis vær</string>
+-    <string name="weather_source">Yahoo! Været</string>
++    <string name="weather_source">Open-Meteo</string>
+     <string name="weather_use_custom_location">Bruk egen posisjon</string>
+     <string name="weather_geolocated">Geolokalisert via nettverk</string>
+     <string name="weather_custom_location_dialog_title">Oppgi posisjon</string>
+diff --git a/res/values-nl/strings.xml b/res/values-nl/strings.xml
+index c19905d..40ddf45 100644
+--- a/res/values-nl/strings.xml
++++ b/res/values-nl/strings.xml
+@@ -102,7 +102,7 @@
+     <string name="clock_am_pm_title">AM/PM weergeven</string>
+     <string name="weather_enabled">Ingeschakeld</string>
+     <string name="weather_enable">Weer tonen</string>
+-    <string name="weather_source">Yahoo! Weer</string>
++    <string name="weather_source">Open-Meteo</string>
+     <string name="weather_use_custom_location">Aangepaste locatie</string>
+     <string name="weather_geolocated">Locatie bepalen door netwerk</string>
+     <string name="weather_custom_location_dialog_title">Locatie invoeren</string>
+diff --git a/res/values-pl/strings.xml b/res/values-pl/strings.xml
+index 0258e4a..013c68f 100644
+--- a/res/values-pl/strings.xml
++++ b/res/values-pl/strings.xml
+@@ -100,7 +100,7 @@
+     <string name="show_alarm_title">Wyświetl następny alarm</string>
+     <string name="weather_enabled">Włączone</string>
+     <string name="weather_enable">Wyświetl pogodę</string>
+-    <string name="weather_source">Pogoda Yahoo!</string>
++    <string name="weather_source">Open-Meteo</string>
+     <string name="weather_use_custom_location">Użyj własnej lokalizacji</string>
+     <string name="weather_geolocated">Użyj sieci do lokalizacji</string>
+     <string name="weather_custom_location_dialog_title">Podaj lokalizację</string>
+diff --git a/res/values-pt-rBR/strings.xml b/res/values-pt-rBR/strings.xml
+index 288abc2..d8eb1ef 100644
+--- a/res/values-pt-rBR/strings.xml
++++ b/res/values-pt-rBR/strings.xml
+@@ -86,7 +86,7 @@
+     <string name="weather_refresh_6hrs">6 horas</string>
+     <string name="weather_refresh_8hrs">8 horas</string>
+     <string name="weather_enable">Exibir tempo</string>
+-    <string name="weather_source">Yahoo! Tempo</string>
++    <string name="weather_source">Open-Meteo</string>
+     <string name="weather_use_custom_location">Usar local personalizado</string>
+     <string name="weather_geolocated">Geolocalização usando a rede</string>
+     <string name="weather_custom_location_dialog_title">Inserir localização</string>
+diff --git a/res/values-pt-rPT/strings.xml b/res/values-pt-rPT/strings.xml
+index 7385177..357ed4f 100644
+--- a/res/values-pt-rPT/strings.xml
++++ b/res/values-pt-rPT/strings.xml
+@@ -101,7 +101,7 @@
+     <string name="clock_am_pm_title">Mostrar indicador AM/PM</string>
+     <string name="weather_enabled">Ativo</string>
+     <string name="weather_enable">Mostrar Meteorologia</string>
+-    <string name="weather_source">Yahoo! Tempo</string>
++    <string name="weather_source">Open-Meteo</string>
+     <string name="weather_use_custom_location">Usar localização personalizada</string>
+     <string name="weather_geolocated">Geolocalização usando a rede</string>
+     <string name="weather_custom_location_dialog_title">Insira localização</string>
+diff --git a/res/values-ro/strings.xml b/res/values-ro/strings.xml
+index ce88c28..6cfec20 100644
+--- a/res/values-ro/strings.xml
++++ b/res/values-ro/strings.xml
+@@ -98,7 +98,7 @@
+ 
+     <string name="weather_enabled">"Activat"</string>
+     <string name="weather_enable">"Afişare inf. meteo"</string>
+-    <string name="weather_source">"Yahoo! Meteo"</string>
++    <string name="weather_source">Open-Meteo</string>
+     <string name="weather_use_custom_location">"Utilizaţi locaţia personalizată"</string>
+     <string name="weather_geolocated">"Localizată utilizând reţeaua"</string>
+     <string name="weather_custom_location_dialog_title">"Introduceţi locaţia"</string>
+diff --git a/res/values-ru/strings.xml b/res/values-ru/strings.xml
+index 08f5bc6..587b636 100644
+--- a/res/values-ru/strings.xml
++++ b/res/values-ru/strings.xml
+@@ -108,7 +108,7 @@
+ 
+     <string name="weather_enabled">Включено</string>
+     <string name="weather_enable">Погода отображается</string>
+-    <string name="weather_source">Yahoo! Погода</string>
++    <string name="weather_source">Open-Meteo</string>
+     <string name="weather_use_custom_location">Не определять автоматически</string>
+     <string name="weather_geolocated">Местоположение по сети</string>
+     <string name="weather_custom_location_dialog_title">Введите местоположение</string>
+diff --git a/res/values-sk/strings.xml b/res/values-sk/strings.xml
+index 5bc4c97..1441a42 100644
+--- a/res/values-sk/strings.xml
++++ b/res/values-sk/strings.xml
+@@ -100,7 +100,7 @@
+     <string name="clock_am_pm_title">Zobraziť indikátor AM/PM</string>
+     <string name="weather_enabled">Povolené</string>
+     <string name="weather_enable">Zobraziť počasie</string>
+-    <string name="weather_source">Počasie Yahoo!</string>
++    <string name="weather_source">Open-Meteo</string>
+     <string name="weather_use_custom_location">Použiť vlastné umiestnenie</string>
+     <string name="weather_geolocated">Lokalizované pomocou siete</string>
+     <string name="weather_custom_location_dialog_title">Zadajte umiestnenie</string>
+diff --git a/res/values-sv/strings.xml b/res/values-sv/strings.xml
+index fb749a0..b7c9995 100644
+--- a/res/values-sv/strings.xml
++++ b/res/values-sv/strings.xml
+@@ -98,7 +98,7 @@
+     <string name="show_alarm_title">Visa nästa alarm</string>
+     <string name="weather_enabled">Aktiverad</string>
+     <string name="weather_enable">Visa väder</string>
+-    <string name="weather_source">Yahoo! Väder</string>
++    <string name="weather_source">Open-Meteo</string>
+     <string name="weather_use_custom_location">Använd anpassad plats</string>
+     <string name="weather_geolocated">Geopositionerad använd nätverk</string>
+     <string name="weather_custom_location_dialog_title">Ange plats</string>
+diff --git a/res/values-ug/strings.xml b/res/values-ug/strings.xml
+index c90b173..b7aa0d2 100644
+--- a/res/values-ug/strings.xml
++++ b/res/values-ug/strings.xml
+@@ -100,7 +100,7 @@
+     <string name="clock_am_pm_title">چ ب/چ ك كۆرسەتكۈچنى كۆرسەت</string>
+     <string name="weather_enabled"> قوزغىتىلغان</string>
+     <string name="weather_enable">ھاۋارايى كۆرسەت</string>
+-    <string name="weather_source">Yahoo! ھاۋارايى</string>
++    <string name="weather_source">Open-Meteo</string>
+     <string name="weather_use_custom_location">ئىختىيارىي ئورۇن ئىشلەت</string>
+     <string name="weather_geolocated">جۇغراپىيەلىك ئورۇنغا تورنى ئىشلىتىدۇ</string>
+     <string name="weather_custom_location_dialog_title">ئورۇننى كىرگۈزۈڭ</string>
+diff --git a/res/values-uk/strings.xml b/res/values-uk/strings.xml
+index 788691c..e8bcd42 100644
+--- a/res/values-uk/strings.xml
++++ b/res/values-uk/strings.xml
+@@ -118,7 +118,7 @@
+     <!-- Preferences - Weather -->
+     <string name="weather_enabled">Увімкнено</string>
+     <string name="weather_enable">Погода показується</string>
+-    <string name="weather_source">Yahoo! Погода</string>
++    <string name="weather_source">Open-Meteo</string>
+     <string name="weather_use_custom_location">Не визначати автоматично</string>
+     <string name="weather_geolocated">Місцезнаходження по мережі</string>
+     <string name="weather_custom_location_dialog_title">Введіть місцезнаходження</string>
+diff --git a/res/values-zh-rCN/strings.xml b/res/values-zh-rCN/strings.xml
+index cc7453d..1591378 100644
+--- a/res/values-zh-rCN/strings.xml
++++ b/res/values-zh-rCN/strings.xml
+@@ -102,7 +102,7 @@
+     <string name="show_alarm_title">显示下一个闹钟</string>
+     <string name="weather_enabled">已启用</string>
+     <string name="weather_enable">显示天气</string>
+-    <string name="weather_source">雅虎天气</string>
++    <string name="weather_source">Open-Meteo</string>
+     <string name="weather_use_custom_location">使用自定义的位置</string>
+     <string name="weather_geolocated">使用网络定位</string>
+     <string name="weather_custom_location_dialog_title">输入位置</string>
+diff --git a/res/values-zh-rTW/strings.xml b/res/values-zh-rTW/strings.xml
+index 2200b85..bee287f 100644
+--- a/res/values-zh-rTW/strings.xml
++++ b/res/values-zh-rTW/strings.xml
+@@ -101,7 +101,7 @@
+     <string name="clock_am_pm_title">顯示 AM/PM 指示器</string>
+     <string name="weather_enabled">啓用</string>
+     <string name="weather_enable">顯示天氣</string>
+-    <string name="weather_source">Yahoo! 氣象</string>
++    <string name="weather_source">Open-Meteo</string>
+     <string name="weather_use_custom_location">使用自訂位置</string>
+     <string name="weather_geolocated">使用網路定位</string>
+     <string name="weather_custom_location_dialog_title">輸入位置</string>
+diff --git a/res/values/strings.xml b/res/values/strings.xml
+index 000be8e..70aa30b 100644
+--- a/res/values/strings.xml
++++ b/res/values/strings.xml
+@@ -134,7 +134,10 @@
+     <!-- Preferences - Weather -->
+     <string name="weather_enabled">Enabled</string>
+     <string name="weather_enable">Display weather</string>
+-    <string name="weather_source">Yahoo! Weather</string>
++    <string name="weather_source">Open-Meteo</string>
++    <string name="weather_current_location">Current location</string>
++    <string name="weather_attribution_title">Weather data attribution</string>
++    <string name="weather_attribution_summary">Open-Meteo weather data and GeoNames location search (CC BY 4.0)</string>
+     <string name="weather_use_custom_location">Use custom location</string>
+     <string name="weather_geolocated">Geolocated using network</string>
+     <string name="weather_custom_location_dialog_title">Enter location</string>
+diff --git a/res/xml/preferences_weather.xml b/res/xml/preferences_weather.xml
+index e2e73cc..246a5dd 100644
+--- a/res/xml/preferences_weather.xml
++++ b/res/xml/preferences_weather.xml
+@@ -21,6 +21,11 @@
+     <PreferenceCategory
+         android:title="@string/general_category" >
+ 
++        <Preference
++            android:key="weather_attribution"
++            android:title="@string/weather_attribution_title"
++            android:summary="@string/weather_attribution_summary" />
++
+         <CheckBoxPreference
+             android:key="show_weather"
+             android:title="@string/weather_enable"
+diff --git a/src/com/cyanogenmod/lockclock/preference/CustomLocationPreference.java b/src/com/cyanogenmod/lockclock/preference/CustomLocationPreference.java
+index d88809a..f13097c 100644
+--- a/src/com/cyanogenmod/lockclock/preference/CustomLocationPreference.java
++++ b/src/com/cyanogenmod/lockclock/preference/CustomLocationPreference.java
+@@ -33,7 +33,7 @@ import android.widget.Toast;
+ import com.cyanogenmod.lockclock.R;
+ import com.cyanogenmod.lockclock.misc.Preferences;
+ import com.cyanogenmod.lockclock.weather.WeatherProvider.LocationResult;
+-import com.cyanogenmod.lockclock.weather.YahooWeatherProvider;
++import com.cyanogenmod.lockclock.weather.OpenMeteoWeatherProvider;
+ 
+ import java.util.HashSet;
+ import java.util.List;
+@@ -112,7 +112,7 @@ public class CustomLocationPreference extends EditTextPreference {
+ 
+         @Override
+         protected List<LocationResult> doInBackground(Void... input) {
+-            return new YahooWeatherProvider(getContext()).getLocations(mLocation);
++            return new OpenMeteoWeatherProvider(getContext()).getLocations(mLocation);
+         }
+ 
+         @Override
+diff --git a/src/com/cyanogenmod/lockclock/preference/WeatherPreferences.java b/src/com/cyanogenmod/lockclock/preference/WeatherPreferences.java
+index 327b3e1..71f9c54 100644
+--- a/src/com/cyanogenmod/lockclock/preference/WeatherPreferences.java
++++ b/src/com/cyanogenmod/lockclock/preference/WeatherPreferences.java
+@@ -23,6 +23,7 @@ import android.content.Context;
+ import android.content.DialogInterface;
+ import android.content.Intent;
+ import android.content.SharedPreferences;
++import android.net.Uri;
+ import android.location.LocationManager;
+ import android.os.Bundle;
+ import android.preference.CheckBoxPreference;
+@@ -79,6 +80,17 @@ public class WeatherPreferences extends PreferenceFragment implements
+ 
+         mUseMetric = (CheckBoxPreference) findPreference(Constants.WEATHER_USE_METRIC);
+ 
++        Preference attribution = findPreference("weather_attribution");
++        attribution.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
++            @Override
++            public boolean onPreferenceClick(Preference preference) {
++                Intent intent = new Intent(Intent.ACTION_VIEW,
++                        Uri.parse("https://open-meteo.com/en/license"));
++                startActivity(intent);
++                return true;
++            }
++        });
++
+         // Show a warning if location manager is disabled and there is no custom location set
+         if (!Settings.Secure.isLocationProviderEnabled(mResolver,
+                 LocationManager.NETWORK_PROVIDER)
+diff --git a/src/com/cyanogenmod/lockclock/weather/HttpRetriever.java b/src/com/cyanogenmod/lockclock/weather/HttpRetriever.java
+old mode 100755
+new mode 100644
+index 957d6dc..004939a
+--- a/src/com/cyanogenmod/lockclock/weather/HttpRetriever.java
++++ b/src/com/cyanogenmod/lockclock/weather/HttpRetriever.java
+@@ -1,5 +1,6 @@
+ /*
+  * Copyright (C) 2013 The CyanogenMod Project
++ * Copyright (C) 2026 Project Crystal
+  *
+  * Licensed under the Apache License, Version 2.0 (the "License");
+  * you may not use this file except in compliance with the License.
+@@ -16,30 +17,99 @@
+ 
+ package com.cyanogenmod.lockclock.weather;
+ 
++import android.content.Context;
+ import android.util.Log;
+ 
+-import org.apache.http.HttpEntity;
++import com.cyanogenmod.lockclock.R;
++
+ import org.apache.http.HttpResponse;
+ import org.apache.http.client.methods.HttpGet;
++import org.apache.http.conn.scheme.PlainSocketFactory;
++import org.apache.http.conn.scheme.Scheme;
++import org.apache.http.conn.ssl.SSLSocketFactory;
+ import org.apache.http.impl.client.DefaultHttpClient;
++import org.apache.http.params.BasicHttpParams;
++import org.apache.http.params.HttpConnectionParams;
+ import org.apache.http.util.EntityUtils;
+ 
+ import java.io.IOException;
++import java.io.InputStream;
++import java.security.KeyStore;
++import java.security.cert.Certificate;
++import java.security.cert.CertificateFactory;
++import java.security.cert.X509Certificate;
++import javax.net.ssl.TrustManager;
++import javax.net.ssl.TrustManagerFactory;
++import javax.net.ssl.X509TrustManager;
+ 
+ public class HttpRetriever {
+     private static final String TAG = "HttpRetriever";
++    private static final int TIMEOUT_MS = 15000;
++
++    public static String retrieve(Context context, String url) {
++        BasicHttpParams params = new BasicHttpParams();
++        HttpConnectionParams.setConnectionTimeout(params, TIMEOUT_MS);
++        HttpConnectionParams.setSoTimeout(params, TIMEOUT_MS);
+ 
+-    public static String retrieve(String url) {
+-        HttpGet request = new HttpGet(url);
++        DefaultHttpClient client = new DefaultHttpClient(params);
+         try {
+-            HttpResponse response = new DefaultHttpClient().execute(request);
+-            HttpEntity entity = response.getEntity();
+-            if (entity != null) {
+-                return EntityUtils.toString(entity);
++            client.getConnectionManager().getSchemeRegistry().register(
++                    new Scheme("http", PlainSocketFactory.getSocketFactory(), 80));
++            client.getConnectionManager().getSchemeRegistry().register(
++                    new Scheme("https", getSocketFactory(context), 443));
++            HttpResponse response = client.execute(new HttpGet(url));
++            int status = response.getStatusLine().getStatusCode();
++            if (status < 200 || status >= 300) {
++                Log.w(TAG, "Weather endpoint returned HTTP " + status);
++                return null;
++            }
++            return response.getEntity() == null ? null
++                    : EntityUtils.toString(response.getEntity(), "UTF-8");
++        } catch (Exception e) {
++            Log.e(TAG, "Couldn't retrieve weather data", e);
++            return null;
++        } finally {
++            client.getConnectionManager().shutdown();
++        }
++    }
++
++    private static SSLSocketFactory getSocketFactory(Context context) throws Exception {
++        TrustManagerFactory systemFactory = TrustManagerFactory.getInstance(
++                TrustManagerFactory.getDefaultAlgorithm());
++        systemFactory.init((KeyStore) null);
++        X509TrustManager systemTrust = findTrustManager(systemFactory.getTrustManagers());
++
++        CertificateFactory certificates = CertificateFactory.getInstance("X.509");
++        InputStream input = context.getResources().openRawResource(R.raw.isrg_root_x1);
++        Certificate root;
++        try {
++            root = certificates.generateCertificate(input);
++        } finally {
++            input.close();
++        }
++        KeyStore combinedRoots = KeyStore.getInstance(KeyStore.getDefaultType());
++        combinedRoots.load(null, null);
++        X509Certificate[] systemIssuers = systemTrust.getAcceptedIssuers();
++        for (int i = 0; i < systemIssuers.length; i++) {
++            combinedRoots.setCertificateEntry("system-" + i, systemIssuers[i]);
++        }
++        combinedRoots.setCertificateEntry("isrg-root-x1", root);
++
++        // Android 4.3's default Apache socket factory may negotiate TLS 1.0
++        // only. Open-Meteo currently requires a modern TLS handshake.
++        SSLSocketFactory socketFactory = new SSLSocketFactory(
++                "TLSv1.2", null, null, combinedRoots, null, null);
++        socketFactory.setHostnameVerifier(SSLSocketFactory.BROWSER_COMPATIBLE_HOSTNAME_VERIFIER);
++        return socketFactory;
++    }
++
++    private static X509TrustManager findTrustManager(TrustManager[] managers)
++            throws IllegalStateException {
++        for (TrustManager manager : managers) {
++            if (manager instanceof X509TrustManager) {
++                return (X509TrustManager) manager;
+             }
+-        } catch (IOException e) {
+-            Log.e(TAG, "Couldn't retrieve data", e);
+         }
+-        return null;
++        throw new IllegalStateException("No X509 trust manager available");
+     }
+ }
+diff --git a/src/com/cyanogenmod/lockclock/weather/OpenMeteoWeatherProvider.java b/src/com/cyanogenmod/lockclock/weather/OpenMeteoWeatherProvider.java
+new file mode 100644
+index 0000000..262d6ce
+--- /dev/null
++++ b/src/com/cyanogenmod/lockclock/weather/OpenMeteoWeatherProvider.java
+@@ -0,0 +1,272 @@
++/*
++ * Copyright (C) 2026 Project Crystal
++ *
++ * Licensed under the Apache License, Version 2.0 (the "License");
++ * you may not use this file except in compliance with the License.
++ * You may obtain a copy of the License at
++ *
++ *      http://www.apache.org/licenses/LICENSE-2.0
++ *
++ * Unless required by applicable law or agreed to in writing, software
++ * distributed under the License is distributed on an "AS IS" BASIS,
++ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++ * See the License for the specific language governing permissions and
++ * limitations under the License.
++ */
++
++package com.cyanogenmod.lockclock.weather;
++
++import android.content.Context;
++import android.location.Location;
++import android.net.Uri;
++import android.text.TextUtils;
++import android.util.Log;
++
++import com.cyanogenmod.lockclock.R;
++import com.cyanogenmod.lockclock.misc.Preferences;
++
++import org.json.JSONArray;
++import org.json.JSONException;
++import org.json.JSONObject;
++
++import java.util.ArrayList;
++import java.util.List;
++import java.util.Locale;
++
++public class OpenMeteoWeatherProvider implements WeatherProvider {
++    private static final String TAG = "OpenMeteoWeatherProvider";
++    private static final String GEOCODING_URL =
++            "https://geocoding-api.open-meteo.com/v1/search?name=%s&count=10&language=%s";
++    private static final String FORECAST_URL =
++            "https://api.open-meteo.com/v1/forecast?latitude=%s&longitude=%s"
++            + "&current=temperature_2m,relative_humidity_2m,is_day,weather_code,"
++            + "wind_speed_10m,wind_direction_10m"
++            + "&daily=temperature_2m_min,temperature_2m_max"
++            + "&temperature_unit=%s&wind_speed_unit=%s&timezone=auto&forecast_days=1";
++
++    private final Context mContext;
++
++    public OpenMeteoWeatherProvider(Context context) {
++        mContext = context.getApplicationContext();
++    }
++
++    @Override
++    public List<LocationResult> getLocations(String input) {
++        if (TextUtils.isEmpty(input)) {
++            return null;
++        }
++
++        String language = Locale.getDefault().getLanguage();
++        String url = String.format(Locale.US, GEOCODING_URL,
++                Uri.encode(input), Uri.encode(language));
++        String response = HttpRetriever.retrieve(mContext, url);
++        if (response == null) {
++            return null;
++        }
++
++        try {
++            JSONObject root = new JSONObject(response);
++            JSONArray places = root.optJSONArray("results");
++            if (places == null) {
++                return null;
++            }
++
++            ArrayList<LocationResult> locations = new ArrayList<LocationResult>();
++            for (int i = 0; i < places.length(); i++) {
++                JSONObject place = places.getJSONObject(i);
++                if (place.isNull("latitude") || place.isNull("longitude")
++                        || TextUtils.isEmpty(place.optString("name"))) {
++                    continue;
++                }
++
++                double latitude = place.getDouble("latitude");
++                double longitude = place.getDouble("longitude");
++                LocationResult result = new LocationResult();
++                result.id = coordinatesToId(latitude, longitude);
++                result.city = displayName(place);
++                result.country = place.optString("country", null);
++                result.countryId = place.optString("country_code", null);
++
++                JSONArray postcodes = place.optJSONArray("postcodes");
++                if (postcodes != null && postcodes.length() > 0
++                        && !postcodes.isNull(0)) {
++                    result.postal = postcodes.getString(0);
++                }
++                locations.add(result);
++            }
++            return locations;
++        } catch (JSONException e) {
++            Log.e(TAG, "Received malformed geocoding data", e);
++        }
++        return null;
++    }
++
++    @Override
++    public WeatherInfo getWeatherInfo(String id, String localizedCityName) {
++        double[] coordinates = parseCoordinates(id);
++        String city = localizedCityName;
++
++        // Older LockClock versions stored a Yahoo WOEID. Resolve its saved city
++        // name once, then persist the coordinate ID in the new weather cache.
++        if (coordinates == null) {
++            if (TextUtils.isEmpty(city)) {
++                return null;
++            }
++            List<LocationResult> locations = getLocations(city);
++            if (locations == null || locations.isEmpty()) {
++                return null;
++            }
++            LocationResult location = locations.get(0);
++            coordinates = parseCoordinates(location.id);
++            city = location.city;
++        }
++
++        if (TextUtils.isEmpty(city)) {
++            city = mContext.getString(R.string.weather_current_location);
++        }
++        return getWeatherInfo(coordinates[0], coordinates[1], city);
++    }
++
++    @Override
++    public WeatherInfo getWeatherInfo(Location location) {
++        if (location == null) {
++            return null;
++        }
++        return getWeatherInfo(location.getLatitude(), location.getLongitude(),
++                mContext.getString(R.string.weather_current_location));
++    }
++
++    private WeatherInfo getWeatherInfo(double latitude, double longitude, String city) {
++        boolean metric = Preferences.useMetricUnits(mContext);
++        String temperatureUnit = metric ? "celsius" : "fahrenheit";
++        String windUnit = metric ? "kmh" : "mph";
++        String url = String.format(Locale.US, FORECAST_URL,
++                formatCoordinate(latitude), formatCoordinate(longitude),
++                temperatureUnit, windUnit);
++        String response = HttpRetriever.retrieve(mContext, url);
++        if (response == null) {
++            return null;
++        }
++
++        try {
++            JSONObject root = new JSONObject(response);
++            JSONObject current = root.getJSONObject("current");
++            JSONObject daily = root.getJSONObject("daily");
++            JSONArray lows = daily.getJSONArray("temperature_2m_min");
++            JSONArray highs = daily.getJSONArray("temperature_2m_max");
++            if (lows.length() == 0 || highs.length() == 0
++                    || lows.isNull(0) || highs.isNull(0)) {
++                return null;
++            }
++
++            int weatherCode = mapWeatherCode(current.getInt("weather_code"),
++                    current.optInt("is_day", 1) == 1);
++            String id = coordinatesToId(latitude, longitude);
++            WeatherInfo info = new WeatherInfo(mContext, id, city, null,
++                    null, weatherCode,
++                    (float) current.getDouble("temperature_2m"),
++                    (float) lows.getDouble(0), (float) highs.getDouble(0),
++                    metric ? "C" : "F",
++                    (float) current.getDouble("relative_humidity_2m"),
++                    (float) current.getDouble("wind_speed_10m"),
++                    current.optInt("wind_direction_10m", -1),
++                    metric ? "km/h" : "mph",
++                    System.currentTimeMillis());
++            Preferences.setCachedLocationId(mContext, id);
++            return info;
++        } catch (JSONException e) {
++            Log.e(TAG, "Received malformed forecast data", e);
++        }
++        return null;
++    }
++
++    private static String displayName(JSONObject place) {
++        String name = place.optString("name", "");
++        String admin1 = place.optString("admin1", "");
++        if (!TextUtils.isEmpty(admin1) && !name.equalsIgnoreCase(admin1)) {
++            return name + ", " + admin1;
++        }
++        return name;
++    }
++
++    private static String coordinatesToId(double latitude, double longitude) {
++        return String.format(Locale.US, "%.4f,%.4f", latitude, longitude);
++    }
++
++    private static String formatCoordinate(double coordinate) {
++        return String.format(Locale.US, "%.4f", coordinate);
++    }
++
++    private static double[] parseCoordinates(String id) {
++        if (TextUtils.isEmpty(id)) {
++            return null;
++        }
++        String[] parts = id.split(",", 2);
++        if (parts.length != 2) {
++            return null;
++        }
++        try {
++            double latitude = Double.parseDouble(parts[0]);
++            double longitude = Double.parseDouble(parts[1]);
++            if (Double.isNaN(latitude) || Double.isInfinite(latitude)
++                    || Double.isNaN(longitude) || Double.isInfinite(longitude)
++                    || latitude < -90 || latitude > 90
++                    || longitude < -180 || longitude > 180) {
++                return null;
++            }
++            return new double[] { latitude, longitude };
++        } catch (NumberFormatException e) {
++            return null;
++        }
++    }
++
++    private static int mapWeatherCode(int code, boolean isDay) {
++        switch (code) {
++            case 0:
++                return isDay ? 32 : 31;
++            case 1:
++                return isDay ? 34 : 33;
++            case 2:
++                return isDay ? 30 : 29;
++            case 3:
++                return isDay ? 28 : 27;
++            case 45:
++            case 48:
++                return 20;
++            case 51:
++                return 9;
++            case 53:
++            case 55:
++                return 12;
++            case 56:
++            case 57:
++                return 8;
++            case 61:
++            case 80:
++                return 11;
++            case 63:
++            case 65:
++            case 81:
++            case 82:
++                return 12;
++            case 66:
++            case 67:
++                return 10;
++            case 71:
++            case 77:
++            case 85:
++                return 14;
++            case 73:
++            case 75:
++            case 86:
++                return 16;
++            case 95:
++                return 4;
++            case 96:
++            case 99:
++                return 17;
++            default:
++                return 3200;
++        }
++    }
++}
+diff --git a/src/com/cyanogenmod/lockclock/weather/WeatherUpdateService.java b/src/com/cyanogenmod/lockclock/weather/WeatherUpdateService.java
+index badf20b..5b46386 100755
+--- a/src/com/cyanogenmod/lockclock/weather/WeatherUpdateService.java
++++ b/src/com/cyanogenmod/lockclock/weather/WeatherUpdateService.java
+@@ -156,7 +156,7 @@ public class WeatherUpdateService extends Service {
+ 
+         @Override
+         protected WeatherInfo doInBackground(Void... params) {
+-            WeatherProvider provider = new YahooWeatherProvider(mContext);
++            WeatherProvider provider = new OpenMeteoWeatherProvider(mContext);
+             String customLocationId = null, customLocationName = null;
+ 
+             if (Preferences.useCustomWeatherLocation(mContext)) {
+diff --git a/src/com/cyanogenmod/lockclock/weather/YahooWeatherProvider.java b/src/com/cyanogenmod/lockclock/weather/YahooWeatherProvider.java
+deleted file mode 100644
+index dc714cb..0000000
+--- a/src/com/cyanogenmod/lockclock/weather/YahooWeatherProvider.java
++++ /dev/null
+@@ -1,272 +0,0 @@
+-/*
+- * Copyright (C) 2013 The CyanogenMod Project
+- *
+- * Licensed under the Apache License, Version 2.0 (the "License");
+- * you may not use this file except in compliance with the License.
+- * You may obtain a copy of the License at
+- *
+- *      http://www.apache.org/licenses/LICENSE-2.0
+- *
+- * Unless required by applicable law or agreed to in writing, software
+- * distributed under the License is distributed on an "AS IS" BASIS,
+- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+- * See the License for the specific language governing permissions and
+- * limitations under the License.
+- */
+-
+-package com.cyanogenmod.lockclock.weather;
+-
+-import android.content.Context;
+-import android.location.Location;
+-import android.net.Uri;
+-import android.util.Log;
+-
+-import com.cyanogenmod.lockclock.misc.Preferences;
+-
+-import org.json.JSONArray;
+-import org.json.JSONException;
+-import org.json.JSONObject;
+-import org.xml.sax.Attributes;
+-import org.xml.sax.InputSource;
+-import org.xml.sax.SAXException;
+-import org.xml.sax.helpers.DefaultHandler;
+-
+-import java.io.IOException;
+-import java.io.StringReader;
+-import java.util.ArrayList;
+-import java.util.List;
+-import java.util.Locale;
+-
+-import javax.xml.parsers.ParserConfigurationException;
+-import javax.xml.parsers.SAXParser;
+-import javax.xml.parsers.SAXParserFactory;
+-
+-public class YahooWeatherProvider implements WeatherProvider {
+-    private static final String TAG = "YahooWeatherProvider";
+-
+-    private static final String URL_WEATHER =
+-            "http://weather.yahooapis.com/forecastrss?w=%s&u=%s";
+-    private static final String URL_LOCATION =
+-            "http://query.yahooapis.com/v1/public/yql?format=json&q=" +
+-            Uri.encode("select woeid, postal, admin1, admin2, admin3, " +
+-                    "locality1, locality2, country from geo.places where " +
+-                    "(placetype = 7 or placetype = 8 or placetype = 9 " +
+-                    "or placetype = 10 or placetype = 11) and text =");
+-    private static final String URL_PLACEFINDER =
+-            "http://query.yahooapis.com/v1/public/yql?format=json&q=" +
+-            Uri.encode("select woeid, city from geo.placefinder where gflags=\"R\" and text =");
+-
+-    private static final String[] LOCALITY_NAMES = new String[] {
+-        "locality1", "locality2", "admin3", "admin2", "admin1"
+-    };
+-
+-    private Context mContext;
+-
+-    public YahooWeatherProvider(Context context) {
+-        mContext = context;
+-    }
+-
+-    @Override
+-    public List<LocationResult> getLocations(String input) {
+-        String locale = mContext.getResources().getConfiguration().locale.getCountry();
+-        String params = "\"" + input + "\" and lang = \"" + locale + "\"";
+-        String url = URL_LOCATION + Uri.encode(params);
+-        JSONObject jsonResults = fetchResults(url);
+-        if (jsonResults == null) {
+-            return null;
+-        }
+-
+-        try {
+-            JSONArray places = jsonResults.optJSONArray("place");
+-            if (places == null) {
+-                // Yahoo returns an object instead of an array when there's only one result
+-                places = new JSONArray();
+-                places.put(jsonResults.getJSONObject("place"));
+-            }
+-
+-            ArrayList<LocationResult> results = new ArrayList<LocationResult>();
+-            for (int i = 0; i < places.length(); i++) {
+-                LocationResult result = parsePlace(places.getJSONObject(i));
+-                if (result != null) {
+-                    results.add(result);
+-                }
+-            }
+-            return results;
+-        } catch (JSONException e) {
+-            Log.e(TAG, "Received malformed places data", e);
+-        }
+-        return null;
+-    }
+-
+-    public WeatherInfo getWeatherInfo(String id, String localizedCityName) {
+-        String unit = Preferences.useMetricUnits(mContext) ? "c" : "f";
+-        String url = String.format(URL_WEATHER, id, unit);
+-        String response = HttpRetriever.retrieve(url);
+-
+-        if (response == null) {
+-            return null;
+-        }
+-
+-        SAXParserFactory factory = SAXParserFactory.newInstance();
+-        try {
+-            SAXParser parser = factory.newSAXParser();
+-            StringReader reader = new StringReader(response);
+-            WeatherHandler handler = new WeatherHandler();
+-            parser.parse(new InputSource(reader), handler);
+-
+-            if (handler.isComplete()) {
+-                WeatherInfo w = new WeatherInfo(mContext, id,
+-                        localizedCityName != null ? localizedCityName : handler.city, null,
+-                        handler.condition, handler.conditionCode, handler.temperature,
+-                        handler.forecasts.get(0).low, handler.forecasts.get(0).high,
+-                        handler.temperatureUnit, handler.humidity, handler.windSpeed,
+-                        handler.windDirection, handler.speedUnit,
+-                        System.currentTimeMillis());
+-                Log.d(TAG, "Weather updated: " + w);
+-                return w;
+-            }
+-        } catch (ParserConfigurationException e) {
+-            Log.e(TAG, "Could not create XML parser", e);
+-        } catch (SAXException e) {
+-            Log.e(TAG, "Could not parse weather XML", e);
+-        } catch (IOException e) {
+-            Log.e(TAG, "Could not parse weather XML", e);
+-        }
+-
+-        return null;
+-    }
+-
+-    private static class WeatherHandler extends DefaultHandler {
+-        String city;
+-        String temperatureUnit, speedUnit;
+-        int windDirection, conditionCode;
+-        float humidity, temperature, windSpeed;
+-        String condition;
+-        ArrayList<DayForecast> forecasts = new ArrayList<DayForecast>();
+-
+-        private static class DayForecast {
+-            float low, high;
+-            int conditionCode;
+-            String condition;
+-        }
+-
+-        @Override
+-        public void startElement(String uri, String localName, String qName, Attributes attributes)
+-                throws SAXException {
+-            if (qName.equals("yweather:location")) {
+-                city = attributes.getValue("city");
+-            } else if (qName.equals("yweather:units")) {
+-                temperatureUnit = attributes.getValue("temperature");
+-                speedUnit = attributes.getValue("speed");
+-            } else if (qName.equals("yweather:wind")) {
+-                windDirection = (int) stringToFloat(attributes.getValue("direction"), -1);
+-                windSpeed = stringToFloat(attributes.getValue("speed"), -1);
+-            } else if (qName.equals("yweather:atmosphere")) {
+-                humidity = stringToFloat(attributes.getValue("humidity"), -1);
+-            } else if (qName.equals("yweather:condition")) {
+-                condition = attributes.getValue("text");
+-                conditionCode = (int) stringToFloat(attributes.getValue("code"), -1);
+-                temperature = stringToFloat(attributes.getValue("temp"), Float.NaN);
+-            } else if (qName.equals("yweather:forecast")) {
+-                DayForecast day = new DayForecast();
+-                day.low = stringToFloat(attributes.getValue("low"), Float.NaN);
+-                day.high = stringToFloat(attributes.getValue("high"), Float.NaN);
+-                day.condition = attributes.getValue("text");
+-                day.conditionCode = (int) stringToFloat(attributes.getValue("code"), -1);
+-                if (!Float.isNaN(day.low) && !Float.isNaN(day.high) && day.conditionCode >= 0) {
+-                    forecasts.add(day);
+-                }
+-            }
+-        }
+-        public boolean isComplete() {
+-            return temperatureUnit != null && speedUnit != null && conditionCode >= 0
+-                    && !Float.isNaN(temperature) && !forecasts.isEmpty();
+-        }
+-        private float stringToFloat(String value, float defaultValue) {
+-            try {
+-                if (value != null) {
+-                    return Float.parseFloat(value);
+-                }
+-            } catch (NumberFormatException e) {
+-                // fall through to the return line below
+-            }
+-            return defaultValue;
+-        }
+-    }
+-
+-    public WeatherInfo getWeatherInfo(Location location) {
+-        String locale = mContext.getResources().getConfiguration().locale.getCountry();
+-        String params = String.format(Locale.US, "\"%f %f\" and lang=\"%s\"",
+-                location.getLatitude(), location.getLongitude(), locale);
+-        String url = URL_PLACEFINDER + Uri.encode(params);
+-        JSONObject results = fetchResults(url);
+-        if (results == null) {
+-            return null;
+-        }
+-
+-        try {
+-            JSONObject result = results.getJSONObject("Result");
+-            String woeid = result.getString("woeid");
+-            String city = result.getString("city");
+-
+-            Log.d(TAG, "Resolved location " + location + " to " + city + " (" + woeid + ")");
+-
+-            WeatherInfo info = getWeatherInfo(woeid, city);
+-            if (info != null) {
+-                // cache the result for potential reuse
+-                // (the placefinder service API is rate limited)
+-                Preferences.setCachedLocationId(mContext, woeid);
+-                return info;
+-            }
+-        } catch (JSONException e) {
+-            Log.e(TAG, "Received malformed placefinder data", e);
+-        }
+-
+-        return null;
+-    }
+-
+-    private LocationResult parsePlace(JSONObject place) throws JSONException {
+-        LocationResult result = new LocationResult();
+-        JSONObject country = place.getJSONObject("country");
+-
+-        result.id = place.getString("woeid");
+-        result.country = country.getString("content");
+-        result.countryId = country.getString("code");
+-        if (!place.isNull("postal")) {
+-            result.postal = place.getJSONObject("postal").getString("content");
+-        }
+-
+-        for (String name : LOCALITY_NAMES) {
+-            if (!place.isNull(name)) {
+-                result.city = place.getJSONObject(name).getString("content");
+-                break;
+-            }
+-        }
+-
+-        if (result.id == null || result.city == null || result.countryId == null) {
+-            return null;
+-        }
+-
+-        return result;
+-    }
+-
+-    private JSONObject fetchResults(String url) {
+-        String response = HttpRetriever.retrieve(url);
+-        if (response == null) {
+-            return null;
+-        }
+-
+-        if (Log.isLoggable(TAG, Log.VERBOSE)) {
+-            Log.v(TAG, "Request URL is " + url + ", response is " + response);
+-        }
+-
+-        try {
+-            JSONObject rootObject = new JSONObject(response);
+-            return rootObject.getJSONObject("query").getJSONObject("results");
+-        } catch (JSONException e) {
+-            Log.w(TAG, "Received malformed places data", e);
+-        }
+-
+-        return null;
+-    }
+-};
