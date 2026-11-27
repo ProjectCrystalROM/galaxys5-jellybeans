@@ -177,7 +177,7 @@ def main():
         help="Extract the shared inventory from this same firmware as well",
     )
     parser.add_argument(
-        "--profile", choices=("graphics-thermal", "wifi", "bluetooth", "gsm-radio"),
+        "--profile", choices=("graphics-thermal", "wifi", "bluetooth", "gsm-radio", "gps"),
         action="append",
         help="Extract a subsystem profile; may be repeated to combine profiles",
     )
