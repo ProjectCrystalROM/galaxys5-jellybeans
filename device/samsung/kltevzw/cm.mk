@@ -10,3 +10,6 @@ PRODUCT_DEVICE := kltevzw
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_MODEL := SM-G900V
+
+# These Samsung products copy their own RIL stack; omit the generic test RIL pair.
+PRODUCT_PACKAGES := $(filter-out libreference-ril libril,$(PRODUCT_PACKAGES))

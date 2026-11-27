@@ -1,0 +1,4 @@
+# Sensor HAL modules from the matching Galaxy S5 firmware.
+lib/libgnustl_shared.so
+lib/hw/sensors.msm8974.so
+lib/hw/sensorhubs.msm8974.so

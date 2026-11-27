@@ -29,6 +29,7 @@ def read_inventory(path):
 
 
 def extract(inventory, system, output, identity, profiles=None):
+    output.mkdir(parents=True, exist_ok=True)
     entries = list(read_inventory(inventory / "proprietary-files.txt"))
     if profiles:
         selected = set()
@@ -103,6 +104,8 @@ def merge_vendor_profile(existing, profile):
     """Merge a freshly extracted profile into an existing vendor directory."""
     profile_files = {}
     for checksum in (profile / "SHA256SUMS").read_text().splitlines():
+        if not checksum.strip():
+            continue
         digest, relative = checksum.split(None, 1)
         profile_files[relative] = digest
 
@@ -110,6 +113,8 @@ def merge_vendor_profile(existing, profile):
     sums = {}
     if sums_path.is_file():
         for checksum in sums_path.read_text().splitlines():
+            if not checksum.strip():
+                continue
             digest, relative = checksum.split(None, 1)
             sums[relative] = digest
 
@@ -177,7 +182,7 @@ def main():
         help="Extract the shared inventory from this same firmware as well",
     )
     parser.add_argument(
-        "--profile", choices=("graphics-thermal", "wifi", "bluetooth", "gsm-radio", "gps"),
+        "--profile", choices=("graphics-thermal", "wifi", "bluetooth", "gsm-radio", "gps", "sensors"),
         action="append",
         help="Extract a subsystem profile; may be repeated to combine profiles",
     )

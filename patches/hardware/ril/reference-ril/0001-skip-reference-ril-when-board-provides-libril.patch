@@ -1,0 +1,15 @@
+diff --git a/hardware/ril/reference-ril/Android.mk b/hardware/ril/reference-ril/Android.mk
+--- a/hardware/ril/reference-ril/Android.mk
++++ b/hardware/ril/reference-ril/Android.mk
+@@ -1,4 +1,6 @@
+ # Copyright 2006 The Android Open Source Project
++# The generic reference RIL depends on the generic libril implementation.
++ifneq ($(BOARD_PROVIDES_LIBRIL),true)
+ 
+ # XXX using libutils for simulator build only...
+ #
+@@ -55,3 +57,4 @@
+   LOCAL_MODULE:= reference-ril
+   include $(BUILD_EXECUTABLE)
+ endif
++endif # BOARD_PROVIDES_LIBRIL

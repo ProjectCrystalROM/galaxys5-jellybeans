@@ -73,3 +73,11 @@ else
 fi
 python3 "$project/scripts/add-att-apn.py" \
     "$tree/vendor/cm/prebuilt/common/etc/apns-conf.xml"
+ril_dir=$tree/hardware/ril/reference-ril
+ril_patch=$project/patches/hardware/ril/reference-ril/0001-skip-reference-ril-when-board-provides-libril.patch
+if git -C "$ril_dir" apply --reverse --check "$ril_patch" >/dev/null 2>&1; then
+    : # The patch is already staged.
+else
+    git -C "$ril_dir" apply --check "$ril_patch"
+    git -C "$ril_dir" apply "$ril_patch"
+fi

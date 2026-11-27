@@ -262,6 +262,7 @@ vendor/lib/libdisp-aba.so
 vendor/lib/libmm-abl-oem.so
 
 # Sensors
+lib/libgnustl_shared.so
 lib/hw/sensors.msm8974.so
 lib/hw/sensorhubs.msm8974.so
 
